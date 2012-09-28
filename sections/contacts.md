@@ -27,7 +27,7 @@ A contact is any client or vendor who appears on any of your invoices or expense
     "tax_id":"",
     "language":"EN",
     "notes":"",
-    "url":"http://endeve.com/my-account/api/v1/contacts/4f513e7b777f99030e00003f"
+    "url":"http://endeve.com/my-account/api/v1/contacts/456987213"
   },
   {
     "id":"456982365",
@@ -50,7 +50,7 @@ A contact is any client or vendor who appears on any of your invoices or expense
     "tax_id":"",
     "language":"EN",
     "notes":"",
-    "url":"http://endeve.com/my-account/api/v1/contacts/4f513e7b777f99030e00003f"
+    "url":"http://endeve.com/my-account/api/v1/contacts/456982365"
   }
 ]
 ```
@@ -59,12 +59,40 @@ A contact is any client or vendor who appears on any of your invoices or expense
 `GET /contacts/1.json` will return the specified contact.
 
 ```json
+{
+    "id":"456987213",
+    "kind":"person",
+    "first_name":"Sheldon",
+    "last_name":"Cooper",
+    "full_name":"Sheldon Cooper",
+    "street_line_1":"2311 N. Los Robles Avenue",
+    "street_line_2":"",
+    "postal_code":"91104",
+    "city":"Pasadena",
+    "region":"CA",
+    "country":"US",
+    "phone_1":"",
+    "phone_2":"",
+    "fax":"",
+    "email":"s.cooperphd@yahoo.com",
+    "web":"",
+    "discount":null,
+    "tax_id":"",
+    "language":"EN",
+    "notes":"",
+    "url":"http://endeve.com/my-account/api/v1/contacts/456987213"
+}
 ```
 
 ## Create contact
 `POST /contacts.json` will create a new contact from the parameters passed.
 
 ```json
+{
+    "kind":"person",
+    "first_name":"Homer",
+    "last_name":"Simpson"
+}
 ```
 
 This will return `201 Created`, with the location of the new contact in the Location header along with the current JSON representation of the contact if the creation was a success.  If the user does not have access to create new contacts, you'll see `403 Forbidden`.
@@ -73,6 +101,17 @@ This will return `201 Created`, with the location of the new contact in the Loca
 `PUT /contacts/1.json` will update the contact from the parameters passed.
 
 ```json
+{
+    "full_name":"Homer Jay Simpson",
+    "street_line_1":"742 Evergreen Terrace",
+    "postal_code":"90701",
+    "city":"Sprinfield",
+    "region":"CA",
+    "country":"US",
+    "phone_1":"555-7334",
+    "phone_2":"555-3223",
+    "email":"chunkylover53@aol.com"	
+}
 ```
 
 This will return `200 OK` if the update was a success along with the current JSON representation of the contact. If the user does not have access to update the contact, you'll see `403 Forbidden`.
