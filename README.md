@@ -14,10 +14,10 @@ To create something, it is similar but you also have to include the Content-Type
 
 ```shell
 curl -u user:pass 
-	-H 'Content-Type: application/json' 
-	-X POST 
-	-d {"first_name":"Tony", "kind":"person", "contact_name":"Stark"}
-	'https://endeve.com/my-account/api/v1/contacts.json'
+	 -H 'Content-Type: application/json' 
+	 -X POST 
+	 -d {"first_name":"Tony", "kind":"person", "contact_name":"Stark"}
+	 'https://endeve.com/my-account/api/v1/contacts.json'
 ```
 
 We only support JSON for serialization of data. Our format is to have no root element and we use snake_case to describe attribute keys. This means that you have to send Content-Type: application/json; charset=utf-8 when you're POSTing or PUTing data into Endeve. **All API URLs end in .json to indicate that they accept and return JSON**.
@@ -37,7 +37,7 @@ curl -u token-id:foo 'https://endeve.com/my-account/api/v1/contacts'
 * [Payments] (https://github.com/recrea/endeve-api/blob/master/sections/payments.md)
 
 ## Rate limiting
-You can perform up to 100 requests per day for account. If you exceed this limit, you'll get a 403 Forbiden response for subsequent requests.
+You can perform up to 100 requests per day for account. If you exceed this limit, you'll get a `403 Forbiden` response for subsequent requests.
 The following headers will inform you about the daily limit and your remaining requests.
 
 * X-RateLimit-Limit
