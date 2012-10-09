@@ -147,7 +147,7 @@ An estimate is a
 }
 ```
 
-This will return `201 Created`, with the location of the new estimate in the Location header along with the current JSON representation of the estimate if the creation was a success.  If the user does not have access to create new estimates, you'll see `403 Forbidden`.
+This will return `201 Created`, with the location of the new estimate in the Location header along with the current JSON representation of the estimate if the creation was a success.  If the user does not have access to create new estimates, you'll see `401 Unauthorized`.
 
 
 ## Update estimate
@@ -159,8 +159,8 @@ This will return `201 Created`, with the location of the new estimate in the Loc
  }
 ```
 
-This will return `200 OK` if the update was a success along with the current JSON representation of the estimate. If the user does not have access to update the contact, you'll see `403 Forbidden`.
+This will return `200 OK` if the update was a success along with the current JSON representation of the estimate. If the user does not have access to update the contact, you'll see `401 Unauthorized`.
 
 
 ## Delete contact
-`DELETE /estimates/1.json` will delete the estimate specified and return `204 No Content` if that was successful. If the user does not have access to delete the estimate, you'll see `403 Forbidden`.
+`DELETE /estimates/1.json` will delete the estimate specified and return `204 No Content` if that was successful. If the user does not have access to delete the estimate, you'll see `401 Unauthorized`.

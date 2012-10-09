@@ -95,7 +95,7 @@ A contact is any client or vendor who appears on any of your invoices or expense
 }
 ```
 
-This will return `201 Created`, with the location of the new contact in the Location header along with the current JSON representation of the contact if the creation was a success.  If the user does not have access to create new contacts, you'll see `403 Forbidden`.
+This will return `201 Created`, with the location of the new contact in the Location header along with the current JSON representation of the contact if the creation was a success.  If the user does not have access to create new contacts, you'll see `401 Unauthorized`.
 
 ## Update contact
 `PUT /contacts/1.json` will update the contact from the parameters passed.
@@ -114,7 +114,7 @@ This will return `201 Created`, with the location of the new contact in the Loca
 }
 ```
 
-This will return `200 OK` if the update was a success along with the current JSON representation of the contact. If the user does not have access to update the contact, you'll see `403 Forbidden`.
+This will return `200 OK` if the update was a success along with the current JSON representation of the contact. If the user does not have access to update the contact, you'll see `401 Unauthorized`.
 
 ## Delete contact
-`DELETE /contacts/1.json` will delete the contact specified and return `204 No Content` if that was successful. If the user does not have access to delete the contact, you'll see `403 Forbidden`.
+`DELETE /contacts/1.json` will delete the contact specified and return `204 No Content` if that was successful. If the user does not have access to delete the contact, you'll see `401 Unauthorized`.
