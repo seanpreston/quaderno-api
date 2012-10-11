@@ -38,7 +38,7 @@ An estimate is a
 	"payment_details":"",
 	"notes":"",
 	"state":"draft",
-	"url":"http://endeve.com/my-account/api/v1/estimates/50603e722f412e0435000024.json"
+	"url":"http://quaderno.com/my-account/api/v1/estimates/50603e722f412e0435000024.json"
   },
   {  
 	"id":"50603e722f412e0435000144",
@@ -73,7 +73,7 @@ An estimate is a
 	"payment_details":"",
 	"notes":"",
 	"state":"draft",
-	"url":"http://endeve.com/my-account/api/v1/estimates/50603e722f412e0435000144.json"
+	"url":"http://quaderno.com/my-account/api/v1/estimates/50603e722f412e0435000144.json"
   },
 ]
 ```
@@ -114,7 +114,7 @@ An estimate is a
   "payment_details":"",
   "notes":"",
   "state":"draft",
-  "url":"http://endeve.com/my-account/api/v1/estimates/50603e722f412e0435000024.json"
+  "url":"http://quaderno.com/my-account/api/v1/estimates/50603e722f412e0435000024.json"
 }
 ```
 ## Deliver estimate
