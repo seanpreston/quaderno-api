@@ -43,6 +43,12 @@ The following headers will inform you about the daily limit and your remaining r
 * X-RateLimit-Limit
 * X-RateLimit-Remaining
 
+## Ping the API
+In order to test if the service is available, test your authenticate token or know the remaining requests without doing an actual request, you can ping it as follows with no rate limiting cost:
+
+```shell
+curl -u token_id:foo 'https://endeve.com/my-account/api/v1/ping.json'
+```
 ## Errors
 If the app is having trouble, you might see a 5xx error. 500 means that the app is entirely down, but you might also see 502 Bad Gateway, 503 Service Unavailable, or 504 Gateway Timeout. It's your responsibility in all of these cases to retry your request later.
 
