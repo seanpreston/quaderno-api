@@ -38,7 +38,7 @@ An invoice is a
     "payments":[],
     "tags":"lasagna cat",
     "payment_details":"Ask Jon"
-    "url":"http://localhost:3000/assur-219/api/v1/invoices/507693322f412e0e2e00000f"
+    "url":"http://quaderno.com/my-account/api/v1/invoices/507693322f412e0e2e00000f"
   },
 
   {
@@ -74,7 +74,7 @@ An invoice is a
     "payments":[],
     "tags":"lasagna cat",
     "payment_details":""
-    "url":"http://localhost:3000/assur-219/api/v1/invoices/507693322f412e0e2e0000da"
+    "url":"http://quaderno.com/my-account/api/v1/invoices/507693322f412e0e2e0000da"
   },
 ]
 ```
@@ -115,7 +115,7 @@ An invoice is a
   "payments":[],
   "tags":"lasagna cat",
   "payment_details":""
-  "url":"http://localhost:3000/assur-219/api/v1/invoices/507693322f412e0e2e0000da"
+  "url":"http://quaderno.com/my-account/api/v1/invoices/507693322f412e0e2e0000da"
 }
 ```
 
