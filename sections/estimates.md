@@ -119,6 +119,7 @@ An estimate is a
 ```
 ## Deliver estimate
 `GET /estimates/1/deliver.json` will send the estimate to the contact email.
+This will return `200 OK` if the deliver was a success along the current JSON representation of the invoice with the registered activities for the document. If the destination contact has not  an email you'll see `422` 
 
 ## Create estimate
 `POST /estimates.json` will create a new estimate from the parameters passed.

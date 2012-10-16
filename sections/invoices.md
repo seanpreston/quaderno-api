@@ -121,6 +121,7 @@ An invoice is a
 
 ## Deliver invoice
 `GET /invoices/1/deliver.json` will send the invoice to the contact email.
+This will return `200 OK` if the deliver was a success along the current JSON representation of the invoice with the registered activities for the document. If the destination contact has not  an email you'll see `422` 
 
 ## Create invoice
 `POST /invoices.json` will create a new invoice from the parameters passed.
