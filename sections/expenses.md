@@ -78,6 +78,46 @@ Expenses are all the invoices that you receive from your vendors.
 
 ]
 ```
+
+## Get expense
+`GET /expenses/1.json` will return the specified expense.
+```json
+{
+  "id":"5076a6b92f412e0e2e00006c",
+  "number":"00211",
+  "issue_date":"2012-10-11",
+  "contact":{
+	  "id":"5059bdbf2f412e0901000024",
+	  "full_name":"ACME"
+  },
+  "po_number":"",
+  "currency":"USD",
+  "items":[
+    {
+	    "description":"Rockets",
+	    "quantity":"50.0",
+	    "unit_price":"125.0",
+	    "discount_rate":"0.0",
+	    "tax_1_name":"",
+	    "tax_1_rate":"",
+	    "tax_2_name":"",
+	    "tax_2_rate":"",
+	    "subtotal":"$6,250.00",
+	    "discount":"$0.00",
+	    "gross_amount":"$6,250.00"
+	  }
+  ],
+  "subtotal":"$6,250.00",
+  "discount":"$0.00",
+  "taxes":[],
+  "total":"$6,250.00",
+  "payments":[],
+  "tags":"rockets,acme",
+  "notes":"",
+  "state":"outstanding",
+  "url":"http://localhost:3000/assur-219/api/v1/expenses/5076a6b92f412e0e2e00006c"
+}
+```
 ## Create expense
 `POST /expenses.json` will create a new expense from the parameters passed.
 ```json

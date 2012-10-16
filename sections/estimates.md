@@ -25,15 +25,15 @@ An estimate is a
 		"tax_1_rate":"",
 		"tax_2_name":"",
 		"tax_2_rate":"",
-		"subtotal":"\u20ac0.00",
+		"subtotal":"\u20ac100.00",
 		"discount":"\u20ac0.00",
-		"gross_amount":"\u20ac0.00"
+		"gross_amount":"\u20ac100.00"
 	   }
     ],
-	"subtotal":"\u20ac0.00",
+	"subtotal":"\u20ac100.00",
 	"discount":"\u20ac0.00",
 	"taxes":[],
-	"total":"\u20ac0.00",
+	"total":"\u20ac100.00",
 	"tags":"",
 	"payment_details":"",
 	"notes":"",
@@ -53,22 +53,22 @@ An estimate is a
 	"items":[
 	  {
         "description":"Cookies",
-		"quantity":"1.0",
-		"unit_price":"0.0",
+		"quantity":"5.0",
+		"unit_price":"1.95",
 		"discount_rate":"0.0",
 		"tax_1_name":"",
 		"tax_1_rate":"",
 		"tax_2_name":"",
 		"tax_2_rate":"",
-		"subtotal":"\u20ac0.00",
+		"subtotal":"\u20ac9.75",
 		"discount":"\u20ac0.00",
-		"gross_amount":"\u20ac0.00"
+		"gross_amount":"\u20ac9.75"
 	   }
     ],
-	"subtotal":"\u20ac0.00",
+	"subtotal":"\u20ac9.75",
 	"discount":"\u20ac0.00",
 	"taxes":[],
-	"total":"\u20ac0.00",
+	"total":"\u20ac9.75",
 	"tags":"",
 	"payment_details":"",
 	"notes":"",
@@ -95,21 +95,21 @@ An estimate is a
   	{
 	  "description":"ACME TNT",
 	  "quantity":"1.0",
-	  "unit_price":"100.0",
+	  "unit_price":"\u20ac100.0",
 	  "discount_rate":"0.0",
   	  "tax_1_name":"",
 	  "tax_1_rate":"",
 	  "tax_2_name":"",
 	  "tax_2_rate":"",
-	  "subtotal":"\u20ac0.00",
+	  "subtotal":"\u20ac100.00",
 	  "discount":"\u20ac0.00",
-	  "gross_amount":"\u20ac0.00"
+	  "gross_amount":"\u20ac100.00"
 	}
   ],
-  "subtotal":"\u20ac0.00",
+  "subtotal":"\u20ac100.00",
   "discount":"\u20ac0.00",
   "taxes":[],
-  "total":"\u20ac0.00",
+  "total":"\u20ac100.00",
   "tags":"",
   "payment_details":"",
   "notes":"",
