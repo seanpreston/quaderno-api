@@ -132,21 +132,28 @@ This will return `200 OK` if the deliver was a success along the current JSON re
   "currency":"EUR",
   "items":[
     {
-	  "description":"ACME Catapult",
-	  "quantity":"1.0",
-	  "unit_price":"0.0",
-	  "discount_rate":"0.0",
-	  "tax_1_name":"",
-	  "tax_1_rate":"",
-	  "tax_2_name":"",
-	  "tax_2_rate":""
-	}
+	    "description":"ACME Catapult",
+	    "quantity":"1.0",
+	    "unit_price":"0.0",
+	    "discount_rate":"0.0",
+	    "tax_1_name":"",
+	    "tax_1_rate":"",
+	    "tax_2_name":"",
+	    "tax_2_rate":""
+	  }
   ],
   "tags":"tnt",
   "payment_details":"",
   "notes":""
 }
 ```
+
+Mandatory fields:
+
+* number: number of the estimate.
+* contact_id: identifier of the contact. 
+* contact_name: name of the contact.
+* items: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
 
 This will return `201 Created`, with the location of the new estimate in the Location header along with the current JSON representation of the estimate if the creation was a success.  If the user does not have access to create new estimates, you'll see `401 Unauthorized`.
 
