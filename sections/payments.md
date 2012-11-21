@@ -12,7 +12,7 @@ A payment is a
 ```
 Mandatory fields:
 
-* number: amount (in cents) to be paid
+* number: amount to be paid
 * method: method of payment (credit_card, cash, wire_transfer, direct_debit, check, promissory_note, iou, paypal or other)
 
 This will return `200 OK`, with the location of the new payment in the Location header along with the current JSON representation of the payment if the creation was a success.  If the user does not have access to create new payment, you'll see `401 Unauthorized`.

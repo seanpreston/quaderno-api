@@ -150,7 +150,6 @@ This will return `200 OK` if the deliver was a success along the current JSON re
 
 Mandatory fields:
 
-* number: number of the estimate.
 * contact_id: identifier of the contact. 
 * contact_name: name of the contact.
 * items: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
