@@ -35,7 +35,15 @@ An invoice is a
     "discount":"$0.00",
     "taxes":[],
     "total":"$93.75",
-    "payments":[],
+    "payments":[
+      {
+        "id":"50aca7d92f412eda5200002c",
+        "date":"2012-11-21",
+        "method":"credit_card",
+        "amount":"\u20ac93.75",
+        "url":"http://quaderno.com/my-account/api/v1/invoices/507693322f412e0e2e00000f/payments/50aca7d92f412eda5200002c.json"
+      },
+    ],
     "tags":"lasagna cat",
     "payment_details":"Ask Jon"
     "url":"http://quaderno.com/my-account/api/v1/invoices/507693322f412e0e2e00000f"
