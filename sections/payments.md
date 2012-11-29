@@ -7,13 +7,13 @@ A payment is a
 ```json
 {
   "number":"56600", 
-  "method":"credit_card"
+  "payment_method":"credit_card"
 }
 ```
 Mandatory fields:
 
 * number: amount to be paid
-* method: method of payment (credit_card, cash, wire_transfer, direct_debit, check, promissory_note, iou, paypal or other)
+* payment_method: method of payment (credit_card, cash, wire_transfer, direct_debit, check, promissory_note, iou, paypal or other)
 
 This will return `200 OK`, with the location of the new payment in the Location header along with the current JSON representation of the payment if the creation was a success.  If the user does not have access to create new payment, you'll see `401 Unauthorized`.
 

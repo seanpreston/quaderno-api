@@ -1,4 +1,4 @@
-# Expenses
+# Invoices
 An invoice is a
 
 ## Get invoices
@@ -39,7 +39,7 @@ An invoice is a
       {
         "id":"50aca7d92f412eda5200002c",
         "date":"2012-11-21",
-        "method":"credit_card",
+        "payment_method":"credit_card",
         "amount":"\u20ac93.75",
         "url":"http://quaderno.com/my-account/api/v1/invoices/507693322f412e0e2e00000f/payments/50aca7d92f412eda5200002c.json"
       },
