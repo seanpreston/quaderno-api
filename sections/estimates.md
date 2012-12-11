@@ -1,5 +1,5 @@
 # Estimates
-An estimate is a
+An estimate is an offer that you give a client in order to get a specific job. With the time, estimates are usually turned into issued invoices. 
 
 ## Get estimates
 `GET /estimates.json` will return all your estimates.
