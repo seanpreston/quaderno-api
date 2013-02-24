@@ -54,7 +54,8 @@ If the app is having trouble, you might see a 5xx error. 500 means that the app 
 
 ## API kits
 At the moment, API kits are available in Ruby and PHP5. Their goal is to make integrating with our API as easy as possible.
-**Ruby**: [https://github.com/recrea/quaderno-ruby](https://github.com/recrea/quaderno-ruby)
+
+**Ruby**: [https://github.com/recrea/quaderno-ruby](https://github.com/recrea/quaderno-ruby)  
 **PHP**: [https://github.com/recrea/quaderno-php](https://github.com/recrea/quaderno-php)
 
 ## Improvements
