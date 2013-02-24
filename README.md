@@ -52,6 +52,11 @@ curl -u token_id:foo 'https://quaderno.io/my-account/api/v1/ping.json'
 ## Errors
 If the app is having trouble, you might see a 5xx error. 500 means that the app is entirely down, but you might also see 502 Bad Gateway, 503 Service Unavailable, or 504 Gateway Timeout. It's your responsibility in all of these cases to retry your request later.
 
+## API kits
+At the moment, API kits are available in Ruby and PHP5. Their goal is to make integrating with our API as easy as possible.
+**Ruby**: [https://github.com/recrea/quaderno-ruby](https://github.com/recrea/quaderno-ruby)
+**PHP**: [https://github.com/recrea/quaderno-php](https://github.com/recrea/quaderno-php)
+
 ## Improvements
 Please tell us how we can make the API better. If you have a specific feature request or if you found a bug, please use GitHub issues. Fork these docs and send a pull request with improvements.
 
