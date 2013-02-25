@@ -41,12 +41,12 @@ An invoice is a
         "date":"2012-11-21",
         "payment_method":"credit_card",
         "amount":"\u20ac93.75",
-        "url":"http://quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e00000f/payments/50aca7d92f412eda5200002c.json"
+        "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e00000f/payments/50aca7d92f412eda5200002c.json"
       },
     ],
     "tags":"lasagna cat",
     "payment_details":"Ask Jon"
-    "url":"http://quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e00000f"
+    "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e00000f"
   },
 
   {
@@ -82,7 +82,7 @@ An invoice is a
     "payments":[],
     "tags":"lasagna cat",
     "payment_details":""
-    "url":"http://quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e0000da"
+    "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e0000da"
   },
 ]
 ```
@@ -123,7 +123,7 @@ An invoice is a
   "payments":[],
   "tags":"lasagna cat",
   "payment_details":""
-  "url":"http://quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e0000da"
+  "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e0000da"
 }
 ```
 
