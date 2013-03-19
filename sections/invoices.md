@@ -16,7 +16,7 @@ An invoice is a
     "po_number":null,
     "due_date":null,
     "currency":"USD",
-    "items":[
+    "items_attributes":[
       {
         "description":"lasagna",
         "quantity":"25.0",
