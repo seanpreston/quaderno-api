@@ -16,7 +16,7 @@ An invoice is a
     "po_number":null,
     "due_date":null,
     "currency":"USD",
-    "items_attributes":[
+    "items":[
       {
         "description":"lasagna",
         "quantity":"25.0",
@@ -139,7 +139,7 @@ This will return `200 OK` if the deliver was a success along the current JSON re
   "contact_name":"STARK",
   "po_number":"",
   "currency":"USD",
-  "items":[
+  "items_attributes":[
     {
       "description":"Whiskey",
       "quantity":"1.0",

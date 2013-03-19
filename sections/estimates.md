@@ -130,7 +130,7 @@ This will return `200 OK` if the deliver was a success along the current JSON re
   "contact_name":"Wild E. Coyote",
   "po_number":"",
   "currency":"EUR",
-  "items":[
+  "items_attributes":[
     {
 	    "description":"ACME Catapult",
 	    "quantity":"1.0",

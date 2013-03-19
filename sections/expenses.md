@@ -125,7 +125,7 @@ Expenses are all the invoices that you receive from your vendors.
 	"contact_id":"5059bdbf2f412e0901000024",
 	"contact_name":"ACME",
 	"currency":"USD",
-	"items":[
+	"items_attributes":[
 	  {
 		"description":"Rocket launcher",
 		"quantity":"1.0",
