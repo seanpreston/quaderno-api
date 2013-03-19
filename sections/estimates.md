@@ -152,7 +152,7 @@ Mandatory fields:
 
 * contact_id: identifier of the contact. 
 * contact_name: name of the contact.
-* items: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
+* items_attributes: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
 
 This will return `201 Created`, with the location of the new estimate in the Location header along with the current JSON representation of the estimate if the creation was a success.  If the user does not have access to create new estimates, you'll see `401 Unauthorized`.
 
