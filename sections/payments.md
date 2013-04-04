@@ -6,7 +6,7 @@ A payment is a
 `POST invoices/1/payments.json` or `POST expenses/1/payments.json` will add a payment to the speciefied invoice or expense from the parameters passed (both are mandatory).
 ```json
 {
-  "number":"56600", 
+  "amount":"56.60", 
   "payment_method":"credit_card"
 }
 ```
