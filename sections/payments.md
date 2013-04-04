@@ -1,5 +1,5 @@
 # Payments
-A payment is a
+When an invoice is paid, you can record the payment.
 
 ## Create payment
 
