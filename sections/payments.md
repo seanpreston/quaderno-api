@@ -12,7 +12,7 @@ A payment is a
 ```
 Mandatory fields:
 
-* number: amount to be paid
+* amount: amount to be paid
 * payment_method: method of payment (credit_card, cash, wire_transfer, direct_debit, check, promissory_note, iou, paypal or other)
 
 This will return `201 Created`, with the location of the new payment in the Location header along with the current JSON representation of the payment if the creation was a success.  If the user does not have access to create a new payment, you'll see `401 Unauthorized`.
