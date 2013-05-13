@@ -2,7 +2,7 @@
 The items are those products or services that you sell to your customers.
  
 ## Get items
-`GET /items.json` will return all your item.
+`GET /items.json` will return all your items.
 
 ```json
 [
