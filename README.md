@@ -34,6 +34,7 @@ curl -u token-id:foo 'https://app.quaderno.io/my-account/api/v1/contacts'
 * [Invoices] (https://github.com/recrea/quaderno-api/blob/master/sections/invoices.md)
 * [Expenses] (https://github.com/recrea/quaderno-api/blob/master/sections/expenses.md)
 * [Estimates] (https://github.com/recrea/quaderno-api/blob/master/sections/estimates.md)
+* [Items] (https://github.com/recrea/quaderno-api/blob/master/sections/items.md)
 * [Payments] (https://github.com/recrea/quaderno-api/blob/master/sections/payments.md)
 
 ## Rate limiting
