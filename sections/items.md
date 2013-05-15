@@ -8,18 +8,18 @@ The items are those products or services that you sell to your customers.
 [
   {
     "id":1,
-    "code":"BluRay 0000"
+    "code":"BluRay 0000",
     "name":"Titanic",
     "unit_cost":"15.0",
     "url":"https://quadernoapp.com/my-account/api/v1/items/1"
   },
   {
     "id":2,
-    "code":"BluRay 0001"
+    "code":"BluRay 0001",
     "name":"Titanic II: The revenge",
     "unit_cost":"15.0",
-    "tax_1_name":"AWESOME_TAX"
-    "tax_1_rate":"7.00"
+    "tax_1_name":"AWESOME_TAX",
+    "tax_1_rate":"7.00",
     "url":"https://quadernoapp.com/my-account/api/v1/items/2"
   },
   {
@@ -38,11 +38,11 @@ The items are those products or services that you sell to your customers.
 ```json
 {
   "id":2,
-  "code":"BluRay 0001"
+  "code":"BluRay 0001",
   "name":"Titanic II: The revenge",
   "unit_cost":"15.0",
-  "tax_1_name":"AWESOME_TAX"
-  "tax_1_rate":"7.00"
+  "tax_1_name":"AWESOME_TAX",
+  "tax_1_rate":"7.00",
   "url":"https://quadernoapp.com/my-account/api/v1/items/2"
 }
 ```
@@ -52,12 +52,12 @@ The items are those products or services that you sell to your customers.
 
 ```json
 {
-  "code":"BluRay 0003"
+  "code":"BluRay 0003",
   "name":"Titanic IV: The revenge",
   "unit_cost":"15.0",
-  "tax_1_name":"AWESOME_TAX"
-  "tax_1_rate":"7.00"
-  "tax_2_name":"ANOTHER_AWESOME_TAX"
+  "tax_1_name":"AWESOME_TAX",
+  "tax_1_rate":"7.00",
+  "tax_2_name":"ANOTHER_AWESOME_TAX",
   "tax_2_rate":"10.00"
 }
 ```
@@ -74,7 +74,7 @@ This will return `201 Created`, with the location of the new item in the Locatio
 ```json
 {
   "unit_cost":"10.0",
-  "tax_1_name":"AWESOME_TAX"
+  "tax_1_name":"AWESOME_TAX",
   "tax_1_rate":"7.00"
 }
 ```
