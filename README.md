@@ -36,6 +36,7 @@ curl -u token-id:foo 'https://app.quaderno.io/my-account/api/v1/contacts'
 * [Estimates] (https://github.com/recrea/quaderno-api/blob/master/sections/estimates.md)
 * [Items] (https://github.com/recrea/quaderno-api/blob/master/sections/items.md)
 * [Payments] (https://github.com/recrea/quaderno-api/blob/master/sections/payments.md)
+* [Webhooks] (https://github.com/recrea/quaderno-api/blob/master/sections/webhooks.md)
 
 ## Rate limiting
 You can perform up to 100 requests per day for account. If you exceed this limit, you'll get a `403 Forbiden` response for subsequent requests.
