@@ -72,7 +72,8 @@ The following event types are supported at the moment:
 ```
 Mandatory fields:
 
-* url: indicates the destination url of the webhook request. It must to respond 
+* url: indicates the destination URL of the webhook request. Webhook URLs should be set up to accept HEAD and POST requests. When you provide the URL where you want Quaderno to POST the data for events, we'll do a quick check that the URL exists by using a HEAD request (not POST). If the URL doesn't exist or returns something other than a 200 HTTP response to the HEAD request, Quaderno won't be able to verify that the URL exists and is valid.
+
 * events: an array of strings that indicates which events will trigger the webhook request.
 
 This will return `201 Created`, with the location of the new webhook in the Location header along with the current JSON representation of the webhook if the creation was a success.  If the user does not have access to create new webhooks, you'll see `401 Unauthorized`.
@@ -90,9 +91,6 @@ This will return `200 OK` if the update was a success along with the current JSO
 
 ## Delete webhook
 `DELETE /webhooks/1.json` will delete the webhook specified and return `204 No Content` if that was successful. If the user does not have access to delete the webhook, you'll see `401 Unauthorized`.
-
-
-Webhook URLs should be set up to accept HEAD and POST requests. When you provide the URL where you want Quaderno to POST the data for events, we'll do a quick check that the URL exists by using a HEAD request (not POST). If the URL doesn't exist or returns something other than a 200 HTTP response to the HEAD request, Quaderno won't be able to verify that the URL exists and is valid.
 
 
 ##Authenticating webhook requests
