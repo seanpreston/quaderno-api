@@ -5,7 +5,7 @@ Quaderno Webhooks allows your aplication to receive information about document e
 Every webhook uses the same data format, regardless of the event type. The webhook request is a standard POST along with a hash with the following parameters:
                                                                                         
 * document_id - identifier of the document in Quaderno.
-* document_type - Type of the document (invoice, expense, extimate, ...).
+* document_type - Type of the document (invoice, expense, estimate, ...).
 * event - the event which triggered the webhook.
 
 ## Event types
