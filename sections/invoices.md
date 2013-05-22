@@ -26,6 +26,7 @@ An invoice is a
         "tax_1_rate":"",
         "tax_2_name":"",
         "tax_2_rate":"",
+        "reference":"Awesome!",
         "subtotal":"$93.75",
         "discount":"$0.00",
         "gross_amount":"$93.75"
@@ -70,6 +71,7 @@ An invoice is a
         "tax_1_rate":"",
         "tax_2_name":"",
         "tax_2_rate":"",
+        "reference":"Even the bad ones taste good!",
         "subtotal":"$60.00",
         "discount":"$0.00",
         "gross_amount":"$60.00"
@@ -111,6 +113,7 @@ An invoice is a
       "tax_1_rate":"",
       "tax_2_name":"",
       "tax_2_rate":"",
+      "reference":"Even the bad ones taste good!",
       "subtotal":"$60.00",
       "discount":"$0.00",
       "gross_amount":"$60.00"
