@@ -2,7 +2,7 @@
 The Quaderno API is based on REST: it is comprised of resources with predictable urls and utilises standard HTTP features (like HTTP Basic Authentication, Response Codes and Methods). All requests, including errors, return JSON. The API expects JSON for all POST and PUT requests.
 
 ## Making a request
-All URLs starts with `https://quadernoapp.com/my-account/api/v1/`. The path is prefixed with the account name.
+All URLs starts with `https://quadernoapp.com/my-account/api/v1/`. The path is prefixed with the account name and the API version. If we change the API in backward-incompatible ways, we'll bump the version marker and maintain stable support for the old URLs.
 
 To make a request for all the contacts in your account for instance, you have to append the contacts index path to the base url to form something like https://quadernoapp.com/my-account/api/v1/contacts.json. In curl, it would look like:
 
