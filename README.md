@@ -39,7 +39,7 @@ curl -u token-id:foo 'https://quadernoapp.com/ACCOUNT-NAME/api/v1/contacts'
 * [Webhooks] (https://github.com/recrea/quaderno-api/blob/master/sections/webhooks.md)
 
 ## Rate limiting
-You can perform up to 100 requests per day for account. If you exceed this limit, you'll get a `403 Forbiden` response for subsequent requests.
+You can perform up to 2000 requests per month for account. If you exceed this limit, you'll get a `403 Forbiden` response for subsequent requests.
 The following headers will inform you about the daily limit and your remaining requests.
 
 * X-RateLimit-Limit
