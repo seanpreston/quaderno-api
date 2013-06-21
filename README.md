@@ -27,7 +27,9 @@ HTTP Authentication is used to authenticate with The API. Your username is your 
 
 ```shell
 curl -u token-id:foo 'https://quadernoapp.com/ACCOUNT-NAME/api/v1/contacts'
-```     
+```
+
+You can get more information in the [Authentication page](https://github.com/recrea/quaderno-api/blob/master/sections/authentication.md).
 
 ## API resources
 * [Contacts] (https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md)
