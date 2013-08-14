@@ -160,7 +160,8 @@ This will return `201 Created`, with the location of the new estimate in the Loc
 ## Update estimate
 `PUT /estimates/1.json` will update the estimate from the parameters passed.
 ```json
-{
+{ 
+  "tag_list":"Wacky, racer"
   "contact_id":"505c3b402f412e0248000044",
   "contact_name":"Dick Dastardly",
  }
