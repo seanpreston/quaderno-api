@@ -110,7 +110,7 @@ An estimate is an offer that you give a client in order to get a specific job. W
   "discount":"\u20ac0.00",
   "taxes":[],
   "total":"\u20ac100.00",
-  "tags_list":[],
+  "tag_list":[],
   "payment_details":"",
   "notes":"",
   "state":"draft",
