@@ -82,7 +82,7 @@ An invoice is a
     "taxes":[],
     "total":"$60.00",
     "payments":[],
-    "tags":["pizza", "turtles"],
+    "tag_list":["pizza", "turtles"],
     "payment_details":""
     "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e0000da"
   },
