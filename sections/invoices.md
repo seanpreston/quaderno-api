@@ -45,7 +45,7 @@ An invoice is a
         "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e00000f/payments/50aca7d92f412eda5200002c.json"
       },
     ],
-    "tags":"lasagna cat",
+    "tag_list":["lasagna", "cat"],
     "payment_details":"Ask Jon"
     "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e00000f"
   },
@@ -82,7 +82,7 @@ An invoice is a
     "taxes":[],
     "total":"$60.00",
     "payments":[],
-    "tags":"lasagna cat",
+    "tags":["pizza", "turtles"],
     "payment_details":""
     "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e0000da"
   },
@@ -124,7 +124,7 @@ An invoice is a
   "taxes":[],
   "total":"$60.00",
   "payments":[],
-  "tags":"lasagna cat",
+  "tag_list":["lasagna", "cat"],
   "payment_details":""
   "url":"http://app.quaderno.io/my-account/api/v1/invoices/507693322f412e0e2e0000da"
 }
