@@ -34,7 +34,7 @@ An estimate is an offer that you give a client in order to get a specific job. W
 	"discount":"\u20ac0.00",
 	"taxes":[],
 	"total":"\u20ac100.00",
-	"tags":"",
+	"tag_list":[],
 	"payment_details":"",
 	"notes":"",
 	"state":"draft",
@@ -69,7 +69,7 @@ An estimate is an offer that you give a client in order to get a specific job. W
 	"discount":"\u20ac0.00",
 	"taxes":[],
 	"total":"\u20ac9.75",
-	"tags":"",
+	"tag_list":[],
 	"payment_details":"",
 	"notes":"",
 	"state":"draft",
@@ -110,7 +110,7 @@ An estimate is an offer that you give a client in order to get a specific job. W
   "discount":"\u20ac0.00",
   "taxes":[],
   "total":"\u20ac100.00",
-  "tags":"",
+  "tags_list":[],
   "payment_details":"",
   "notes":"",
   "state":"draft",
@@ -142,7 +142,7 @@ This will return `200 OK` if the deliver was a success along the current JSON re
 	    "tax_2_rate":""
 	  }
   ],
-  "tags":"tnt",
+  "tag_list":"tnt",
   "payment_details":"",
   "notes":""
 }
