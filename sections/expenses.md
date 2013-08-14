@@ -149,7 +149,7 @@ This will return `201 Created`, with the location of the new expense in the Loca
 ```json
 {
 	"po_number":"",
-	"tags":"rocket, launcher"
+	"tag_list":"rocket, launcher"
 	"payment_details":"Money in da bank",
 	"notes":""
 } 
