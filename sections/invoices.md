@@ -165,7 +165,7 @@ This will return `201 Created`, with the location of the new invoice in the Loca
 `PUT /invoices/1.json` will update the invoice from the parameters passed.
 ```json
 {
-  "tags":"whiskey, alcohol"
+  "tag_list":"whiskey, alcohol"
   "notes":"You better pay this time, Tony"
 }
 ```
