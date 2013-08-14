@@ -35,7 +35,7 @@ Expenses are all the invoices that you receive from your vendors.
     "taxes":[],
     "total":"$6,250.00",
     "payments":[],
-    "tags":"rockets,acme",
+    "tag_list":["rockets", "acme"],
     "notes":"",
     "state":"outstanding",
     "url":"http://app.quaderno.io/my-account/api/v1/expenses/5076a6b92f412e0e2e00006c"
@@ -70,7 +70,7 @@ Expenses are all the invoices that you receive from your vendors.
     "taxes":[],
     "total":"$2,500.00",
     "payments":[],
-    "tags":"tnt,acme",
+    "tags":["tnt", "acme"],
     "notes":"",
     "state":"outstanding",
     "url":"http://app.quaderno.io/my-account/api/v1/expenses/5076a6b92f412e0e2e00016d"
@@ -112,7 +112,7 @@ Expenses are all the invoices that you receive from your vendors.
   "taxes":[],
   "total":"$6,250.00",
   "payments":[],
-  "tags":"rockets,acme",
+  "tag_list":["rockets", "acme"],
   "notes":"",
   "state":"outstanding",
   "url":"http://app.quaderno.io/my-account/api/v1/expenses/5076a6b92f412e0e2e00006c"
