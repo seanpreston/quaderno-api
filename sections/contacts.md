@@ -32,8 +32,6 @@ A contact is any client or vendor who appears on any of your invoices or expense
   {
     "id":"456982365",
     "kind":"company",
-    "first_name":"Apple Inc.",
-    "last_name":"",
     "full_name":"Apple Inc.",
     "street_line_1":"1 Infinite Loop",
     "street_line_2":"",
