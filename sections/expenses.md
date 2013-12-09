@@ -144,6 +144,24 @@ Mandatory fields:
 
 This will return `201 Created`, with the location of the new expense in the Location header along with the current JSON representation of the expense if the creation was a success.  If the user does not have access to create new expenses, you'll see `401 Unauthorized`.
 
+### Create an attachment during expense creation
+
+Optionally, you can pass the following key-value along with the rest of the parameters:
+
+```json
+{
+  "attachment":{
+    "data":"aBaSe64EnCoDeDFiLe",
+    "filename":"the_filename.png"
+  }
+}
+```
+Fields:
+* data: contains a Base64 encoded string which represents the file.
+* filename: attachment file name.
+
+Valid files extension are ```pdf txt jpg jpeg png xml xls doc rtf html```, any other format will make unable the expense creation and will return a ```422```.
+
 ## Update expense
 `PUT /expenses/1.json` will update the expense from the parameters passed.
 ```json
