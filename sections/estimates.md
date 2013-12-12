@@ -156,6 +156,23 @@ Mandatory fields:
 
 This will return `201 Created`, with the location of the new estimate in the Location header along with the current JSON representation of the estimate if the creation was a success.  If the user does not have access to create new estimates, you'll see `401 Unauthorized`.
 
+### Create an attachment during estimate creation
+
+Optionally, you can pass the following key-value along with the rest of the parameters:
+
+```json
+{
+  "attachment":{
+    "data":"aBaSe64EnCoDeDFiLe",
+    "filename":"the_filename.png"
+  }
+}
+```
+Fields:
+* data: contains a Base64 encoded string which represents the file.
+* filename: attachment file name.
+
+Valid files extension are ```pdf txt jpg jpeg png xml xls doc rtf html```, any other format will make unable the estimate creation and will return a ```422```.
 
 ## Update estimate
 `PUT /estimates/1.json` will update the estimate from the parameters passed.

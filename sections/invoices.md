@@ -162,6 +162,24 @@ Mandatory fields:
 
 This will return `201 Created`, with the location of the new invoice in the Location header along with the current JSON representation of the invoice if the creation was a success.  If the user does not have access to create new invoices, you'll see `401 Unauthorized`.
 
+### Create an attachment during invoice creation
+
+Optionally, you can pass the following key-value along with the rest of the parameters:
+
+```json
+{
+  "attachment":{
+    "data":"aBaSe64EnCoDeDFiLe",
+    "filename":"the_filename.png"
+  }
+}
+```
+Fields:
+* data: contains a Base64 encoded string which represents the file.
+* filename: attachment file name.
+
+Valid files extension are ```pdf txt jpg jpeg png xml xls doc rtf html```, any other format will make unable the invoice creation and will return a ```422```.
+
 ## Update invoice
 `PUT /invoices/1.json` will update the invoice from the parameters passed.
 ```json
