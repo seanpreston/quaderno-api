@@ -66,7 +66,7 @@ Mandatory fields:
 * name: a name or brief description of the item.
 * unit_cost: cost of the item.
 
-This will return `201 Created`, with the location of the new item in the Location header along with the current JSON representation of the item if the creation was a success.  If the user does not have access to create new items, you'll see `401 Unauthorized`.
+This will return `201 Created`, with the current JSON representation of the item if the creation was a successthe along the location of the new item in the 'url' field .  If the user does not have access to create new items, you'll see `401 Unauthorized`.
 
 ## Update item
 `PUT /items/1.json` will update the item from the parameters passed.

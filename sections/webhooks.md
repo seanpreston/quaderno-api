@@ -75,7 +75,7 @@ Mandatory fields:
 * url: indicates the destination URL of the webhook request. Webhook URLs should be set up to accept HEAD and POST requests. When you provide the URL where you want Quaderno to POST the data for events, we'll do a quick check that the URL exists by using a HEAD request (not POST). If the URL doesn't exist or returns something other than a 200 HTTP response to the HEAD request, Quaderno won't be able to verify that the URL exists and is valid.
 * events: an array of strings that indicates which events will trigger the webhook request.
 
-This will return `201 Created`, with the location of the new webhook in the Location header along with the current JSON representation of the webhook if the creation was a success.  If the user does not have access to create new webhooks, you'll see `401 Unauthorized`.
+This will return `201 Created` with the current JSON representation of the webhook if the creation was a success.  If the user does not have access to create new webhooks, you'll see `401 Unauthorized`.
 
 ## Update webhook
 `PUT /webhooks/1.json` will update the webhook from the parameters passed.

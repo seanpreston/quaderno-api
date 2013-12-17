@@ -97,7 +97,7 @@ Mandatory fields:
 * kind: indicates if the contact is whether a person or a company.
 * first_name: name of the contact.
 
-This will return `201 Created`, with the location of the new contact in the Location header along with the current JSON representation of the contact if the creation was a success.  If the user does not have access to create new contacts, you'll see `401 Unauthorized`.
+This will return `201 Created`, with the current JSON representation of the contact if the creation was a successthe along the location of the new contact in the 'url' field .  If the user does not have access to create new contacts, you'll see `401 Unauthorized`.
 
 ## Update contact
 `PUT /contacts/1.json` will update the contact from the parameters passed.

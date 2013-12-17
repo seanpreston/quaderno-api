@@ -160,7 +160,7 @@ Mandatory fields:
 * contact_name: name of the contact.
 * items_attributes: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
 
-This will return `201 Created`, with the location of the new invoice in the Location header along with the current JSON representation of the invoice if the creation was a success.  If the user does not have access to create new invoices, you'll see `401 Unauthorized`.
+This will return `201 Created`, with the current JSON representation of the invoice if the creation was a successthe along the location of the new invoice in the 'url' field .  If the user does not have access to create new invoices, you'll see `401 Unauthorized`.
 
 ### Create an attachment during invoice creation
 
