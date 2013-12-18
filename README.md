@@ -47,6 +47,13 @@ The following headers will inform you about the daily limit and your remaining r
 * X-RateLimit-Limit
 * X-RateLimit-Remaining
 
+## Pagination
+Please keep in mind that Quaderno paginates the index results, showing 25 results per page. You can change the page by passing the parameter ```page``` (default page is 1). 
+The following headers will inform you about the page context (current page and total pages availables):
+
+* X-Pages-CurrentPage
+* X-Pages-TotalPages  
+
 ## Ping the API
 In order to test if the service is available, test your authenticate token or know the remaining requests without doing an actual request, you can ping it as follows with no rate limiting cost:
 
