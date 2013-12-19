@@ -142,7 +142,7 @@ Mandatory fields:
 * contact_name: name of the contact.
 * items_attributes: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
 
-This will return `201 Created`, with the current JSON representation of the expense if the creation was a successthe along the location of the new expense in the 'url' field .  If the user does not have access to create new expenses, you'll see `401 Unauthorized`.
+This will return `201 Created`, with the current JSON representation of the expense if the creation was a success along the location of the new expense in the 'url' field .  If the user does not have access to create new expenses, you'll see `401 Unauthorized`.
 
 ### Create an attachment during expense creation
 
@@ -172,8 +172,19 @@ Valid files extension are ```pdf txt jpg jpeg png xml xls doc rtf html```, any o
 	"notes":""
 } 
 ```
-
 This will return `200 OK` if the update was a success along with the current JSON representation of the expense. If the user does not have access to update the expense, you'll see `401 Unauthorized`.
+
+### Save an invoice as an expense
+
+`GET /expenses/save.json` will save another account invoice as expense using the permalink passed as parameter
+
+```json
+{ 
+  "permalink":"c2d480801d0e577c6c3177ce0795c4bdaa480e22"
+}
+
+```
+This will return `201 Created`, with the current JSON representation of the expense if the creation was a success along the location of the new expense in the 'url' field .  If the user does not have access to create new expenses, you'll see `401 Unauthorized` or a `422` if the permalink is invalid or the invoice is not suitable to be saved.
 
 ## Delete expense
 `DELETE /expenses/1.json` will delete the expense specified and return `204 No Content` if that was successful. If the user does not have access to delete the expense, you'll see `401 Unauthorized`.
