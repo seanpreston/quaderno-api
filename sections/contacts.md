@@ -96,8 +96,10 @@ Mandatory fields:
 
 * kind: indicates if the contact is whether a person or a company.
 * first_name: name of the contact.
+* bic: This field is mandatory as long as the bank_account (in electronic IBAN format) is present. Must be 11 characters long.
 
-This will return `201 Created`, with the current JSON representation of the contact if the creation was a successthe along the location of the new contact in the 'url' field .  If the user does not have access to create new contacts, you'll see `401 Unauthorized`.
+
+This will return `201 Created`, with the current JSON representation of the contact if the creation was a success along the location of the new contact in the 'url' field .  If the user does not have access to create new contacts, you'll see `401 Unauthorized`.
 
 ## Update contact
 `PUT /contacts/1.json` will update the contact from the parameters passed.
