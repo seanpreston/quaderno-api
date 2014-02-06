@@ -18,7 +18,7 @@ An invoice is a
     "currency":"USD",
     "items":[
       {
-        "id":" 48151623429",
+        "id":"48151623429",
         "description":"lasagna",
         "quantity":"25.0",
         "unit_price":"3.75",
@@ -64,7 +64,7 @@ An invoice is a
     "currency":"USD",
     "items":[
       {
-        "id":" 481516234291",
+        "id":"481516234291",
         "description":"pizza",
         "quantity":"15.0",
         "unit_price":"60.0",
@@ -107,7 +107,7 @@ An invoice is a
   "currency":"USD",
   "items":[
     {
-      "id":" 48151623429",
+      "id":"48151623429",
       "description":"pizza",
       "quantity":"15.0",
       "unit_price":"60.0",
