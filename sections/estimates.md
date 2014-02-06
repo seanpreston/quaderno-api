@@ -7,73 +7,75 @@ An estimate is an offer that you give a client in order to get a specific job. W
 [
   {  
     "id":"50603e722f412e0435000024",
-	"number":"0000003",
-	"issue_date":"2012-09-24",
-	"contact":{
-	  "id":"5059bdbf2f412e0901000024",
-	  "full_name":"Wild E. Coyote"
-	},
-	"po_number":"",
-	"currency":"EUR",
-	"items":[
-	  {
+    "number":"0000003",
+    "issue_date":"2012-09-24",
+    "contact":{
+      "id":"5059bdbf2f412e0901000024",
+      "full_name":"Wild E. Coyote"
+    },
+    "po_number":"",
+    "currency":"EUR",
+    "items":[
+      {
+        "id":"4815162342",
         "description":"ACME TNT",
-		"quantity":"1.0",
-		"unit_price":"100.0",
-		"discount_rate":"0.0",
-		"tax_1_name":"",
-		"tax_1_rate":"",
-		"tax_2_name":"",
-		"tax_2_rate":"",
-		"subtotal":"\u20ac100.00",
-		"discount":"\u20ac0.00",
-		"gross_amount":"\u20ac100.00"
-	   }
+        "quantity":"1.0",
+        "unit_price":"100.0",
+        "discount_rate":"0.0",
+        "tax_1_name":"",
+        "tax_1_rate":"",
+        "tax_2_name":"",
+        "tax_2_rate":"",
+        "subtotal":"\u20ac100.00",
+        "discount":"\u20ac0.00",
+        "gross_amount":"\u20ac100.00"
+       }
     ],
-	"subtotal":"\u20ac100.00",
-	"discount":"\u20ac0.00",
-	"taxes":[],
-	"total":"\u20ac100.00",
-	"tag_list":[],
-	"payment_details":"",
-	"notes":"",
-	"state":"draft",
-	"url":"https://quadernoapp.com/my-account/api/v1/estimates/50603e722f412e0435000024.json"
+    "subtotal":"\u20ac100.00",
+    "discount":"\u20ac0.00",
+    "taxes":[],
+    "total":"\u20ac100.00",
+    "tag_list":[],
+    "payment_details":"",
+    "notes":"",
+    "state":"draft",
+    "url":"https://quadernoapp.com/my-account/api/v1/estimates/50603e722f412e0435000024.json"
   },
   {  
-	"id":"50603e722f412e0435000144",
-	"number":"0000005",
-	"issue_date":"2012-09-24",
-	"contact":{
-	  "id":"5059bdbf2f412e0901000044",
-	  "full_name":"Cookie Monster"
-	},
-	"po_number":"",
-	"currency":"EUR",
-	"items":[
-	  {
+    "id":"50603e722f412e0435000144",
+    "number":"0000005",
+    "issue_date":"2012-09-24",
+    "contact":{
+      "id":"5059bdbf2f412e0901000044",
+      "full_name":"Cookie Monster"
+    },
+    "po_number":"",
+    "currency":"EUR",
+    "items":[
+      {
+        "id":"48151623421",
         "description":"Cookies",
-		"quantity":"5.0",
-		"unit_price":"1.95",
-		"discount_rate":"0.0",
-		"tax_1_name":"",
-		"tax_1_rate":"",
-		"tax_2_name":"",
-		"tax_2_rate":"",
-		"subtotal":"\u20ac9.75",
-		"discount":"\u20ac0.00",
-		"gross_amount":"\u20ac9.75"
-	   }
+        "quantity":"5.0",
+        "unit_price":"1.95",
+        "discount_rate":"0.0",
+        "tax_1_name":"",
+        "tax_1_rate":"",
+        "tax_2_name":"",
+        "tax_2_rate":"",
+        "subtotal":"\u20ac9.75",
+        "discount":"\u20ac0.00",
+        "gross_amount":"\u20ac9.75"
+       }
     ],
-	"subtotal":"\u20ac9.75",
-	"discount":"\u20ac0.00",
-	"taxes":[],
-	"total":"\u20ac9.75",
-	"tag_list":[],
-	"payment_details":"",
-	"notes":"",
-	"state":"draft",
-	"url":"https://quadernoapp.com/my-account/api/v1/estimates/50603e722f412e0435000144.json"
+    "subtotal":"\u20ac9.75",
+    "discount":"\u20ac0.00",
+    "taxes":[],
+    "total":"\u20ac9.75",
+    "tag_list":[],
+    "payment_details":"",
+    "notes":"",
+    "state":"draft",
+    "url":"https://quadernoapp.com/my-account/api/v1/estimates/50603e722f412e0435000144.json"
   },
 ]
 ```
@@ -92,19 +94,20 @@ An estimate is an offer that you give a client in order to get a specific job. W
   "po_number":"",
   "currency":"EUR",
   "items":[
-  	{
-	  "description":"ACME TNT",
-	  "quantity":"1.0",
-	  "unit_price":"\u20ac100.0",
-	  "discount_rate":"0.0",
-  	  "tax_1_name":"",
-	  "tax_1_rate":"",
-	  "tax_2_name":"",
-	  "tax_2_rate":"",
-	  "subtotal":"\u20ac100.00",
-	  "discount":"\u20ac0.00",
-	  "gross_amount":"\u20ac100.00"
-	}
+    {
+      "id":"4815162342"
+      "description":"ACME TNT",
+      "quantity":"1.0",
+      "unit_price":"\u20ac100.0",
+      "discount_rate":"0.0",
+      "tax_1_name":"",
+      "tax_1_rate":"",
+      "tax_2_name":"",
+      "tax_2_rate":"",
+      "subtotal":"\u20ac100.00",
+      "discount":"\u20ac0.00",
+      "gross_amount":"\u20ac100.00"
+    }
   ],
   "subtotal":"\u20ac100.00",
   "discount":"\u20ac0.00",
@@ -132,15 +135,15 @@ This will return `200 OK` if the deliver was a success along the current JSON re
   "currency":"EUR",
   "items_attributes":[
     {
-	    "description":"ACME Catapult",
-	    "quantity":"1.0",
-	    "unit_price":"0.0",
-	    "discount_rate":"0.0",
-	    "tax_1_name":"",
-	    "tax_1_rate":"",
-	    "tax_2_name":"",
-	    "tax_2_rate":""
-	  }
+        "description":"ACME Catapult",
+        "quantity":"1.0",
+        "unit_price":"0.0",
+        "discount_rate":"0.0",
+        "tax_1_name":"",
+        "tax_1_rate":"",
+        "tax_2_name":"",
+        "tax_2_rate":""
+      }
   ],
   "tag_list":"tnt",
   "payment_details":"",
