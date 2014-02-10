@@ -26,7 +26,7 @@ We only support JSON for serialization of data. Our format is to have no root el
 HTTP Authentication is used to authenticate with The API. Your username is your Token ID, which is accessible through the "Profile" menu item.
 
 ```shell
-curl -u token-id:foo 'https://quadernoapp.com/ACCOUNT-NAME/api/v1/contacts'
+curl -u token-id:foo https://quadernoapp.com/ACCOUNT-NAME/api/v1/invoices.json
 ```
 
 You can get more information in the [Authentication page](https://github.com/recrea/quaderno-api/blob/master/sections/authentication.md).
