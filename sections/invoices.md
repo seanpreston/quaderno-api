@@ -1,5 +1,5 @@
 # Invoices
-An invoice is a
+An invoice is a detailed list of goods shipped or services rendered, with an account of all costs.
 
 ## Get invoices
 `GET /invoices.json` will return all your invoices.
@@ -47,7 +47,8 @@ An invoice is a
       },
     ],
     "tag_list":["lasagna", "cat"],
-    "payment_details":"Ask Jon"
+    "payment_details":"Ask Jon",
+    "permalink":"https://quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
     "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e00000f"
   },
 
@@ -85,7 +86,8 @@ An invoice is a
     "total":"$60.00",
     "payments":[],
     "tag_list":["pizza", "turtles"],
-    "payment_details":""
+    "payment_details":"",
+    "permalink":"https://quadernoapp.com/invoice/7hes3c0ndp3rm4l1nk",
     "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e0000da"
   },
 ]
@@ -128,7 +130,8 @@ An invoice is a
   "total":"$60.00",
   "payments":[],
   "tag_list":["lasagna", "cat"],
-  "payment_details":""
+  "payment_details":"",
+  "permalink":"https://quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
   "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e0000da"
 }
 ```
