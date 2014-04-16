@@ -165,30 +165,30 @@ This will return `200 OK` if the deliver was a success along the current JSON re
 
 Mandatory fields:
 
-* contact_id: identifier of the contact. Alternatively, __you can use the ´contact´ attribute instead ´contact_id´__. For example:
-```json
-{
-  "contact":{
-    "first_name":"Tony",
-    "last_name":"Stark",
-    "type":"person"
-  },
-  "po_number":"",
-  "currency":"USD",
-  "tag_list":"playboy, businessman",
-  "items_attributes":[
-    {
-      "description":"Whiskey",
-      "quantity":"1.0",
-      "unit_price":"20.0",
-      "discount_rate":"0.0",
-    }
-  ],
-}
-```
-This have two possible consequences, if the contact first_name and last name combination does not match any of your existing contacts, it will be created, otherwise the invoice will be created for the matching result. Please keep in mind that __you can pass__ `contact_id` __or__ `contact` __but not both of them at the same time, results might not be what you've expected.__
+* contact_id: identifier of the contact. Alternatively, __you can use the__ ´contact´ __attribute instead ´contact_id´__. For example:
+  ```json
+  {
+    "contact":{
+      "first_name":"Tony",
+      "last_name":"Stark",
+      "type":"person"
+    },
+    "po_number":"",
+    "currency":"USD",
+    "tag_list":"playboy, businessman",
+    "items_attributes":[
+      {
+        "description":"Whiskey",
+        "quantity":"1.0",
+        "unit_price":"20.0",
+        "discount_rate":"0.0",
+      }
+    ],
+  }
+  ```
+  This have two possible consequences, if the contact first_name and last name combination does not match any of your existing contacts, it will be created, otherwise the invoice will be created for the matching result. Please keep in mind that __you can pass__ `contact_id` __or__ `contact` __but not both of them at the same time, results might not be what you've expected.__
 
-Allowed fields for `contact` are the same when creating a contact via the contacts API. You can get more information [here] (https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md).
+  Allowed fields for `contact` are the same as when creating a contact via the contacts API. You can get more information [here](https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md).
 
 
 * items_attributes: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
