@@ -165,7 +165,7 @@ This will return `200 OK` if the deliver was a success along the current JSON re
 
 Mandatory fields:
 
-* contact_id: identifier of the contact. Alternatively, __you can use the__ ´contact´ __attribute instead ´contact_id´__. For example:
+* __contact_id:__ identifier of the contact. Alternatively, __you can use the__ ´contact´ __attribute instead ´contact_id´__. For example:
   ```json
   {
     "contact":{
@@ -191,7 +191,7 @@ Mandatory fields:
   Allowed fields for `contact` are the same as when creating a contact via the contacts API. You can get more information [here](https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md).
 
 
-* items_attributes: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
+* __items_attributes:__ An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
 
 This will return `201 Created`, with the current JSON representation of the invoice if the creation was a success along the location of the new invoice in the 'url' field .  If the user does not have access to create new invoices, you'll see `401 Unauthorized`.
 

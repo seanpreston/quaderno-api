@@ -141,9 +141,33 @@ Expenses are all the invoices that you receive from your vendors.
 
 Mandatory fields:
 
-* contact_id: identifier of the contact. 
-* contact_name: name of the contact.
-* items_attributes: An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
+* __contact_id:__ identifier of the contact. Alternatively, __you can use the__ ´contact´ __attribute instead ´contact_id´__. For example:
+  ```json
+  {
+    "contact":{
+      "first_name":"Tony",
+      "last_name":"Stark",
+      "type":"person"
+    },
+    "po_number":"",
+    "currency":"USD",
+    "tag_list":"playboy, businessman",
+    "items_attributes":[
+      {
+        "description":"Whiskey",
+        "quantity":"1.0",
+        "unit_price":"20.0",
+        "discount_rate":"0.0",
+      }
+    ],
+  }
+  ```
+  This have two possible consequences, if the contact first_name and last name combination does not match any of your existing contacts, it will be created, otherwise the invoice will be created for the matching result. Please keep in mind that __you can pass__ `contact_id` __or__ `contact` __but not both of them at the same time, results might not be what you've expected.__
+
+  Allowed fields for `contact` are the same as when creating a contact via the contacts API. You can get more information [here](https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md).
+
+
+* __items_attributes:__ An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
 
 This will return `201 Created`, with the current JSON representation of the expense if the creation was a success along the location of the new expense in the 'url' field .  If the user does not have access to create new expenses, you'll see `401 Unauthorized`.
 
