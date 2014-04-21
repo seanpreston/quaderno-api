@@ -46,8 +46,10 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
         "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e00000f/payments/50aca7d92f412eda5200002c.json"
       },
     ],
-    "tag_list":["lasagna", "cat"],
     "payment_details":"Ask Jon",
+    "notes":"",
+    "state":"paid",
+    "tag_list":["lasagna", "cat"],
     "secure_id":"7hef1rs7p3rm4l1nk",
     "permalink":"https://quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
     "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e00000f"
@@ -86,8 +88,10 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
     "taxes":[],
     "total":"$60.00",
     "payments":[],
-    "tag_list":["pizza", "turtles"],
     "payment_details":"",
+    "notes":"",
+    "state":"draft",
+    "tag_list":["pizza", "turtles"],
     "secure_id":"7hes3c0ndp3rm4l1nk",
     "permalink":"https://quadernoapp.com/invoice/7hes3c0ndp3rm4l1nk",
     "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e0000da"
@@ -131,8 +135,10 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
   "taxes":[],
   "total":"$60.00",
   "payments":[],
-  "tag_list":["lasagna", "cat"],
   "payment_details":"",
+  "notes":"",
+  "state":"draft",
+  "tag_list":["lasagna", "cat"],
   "secure_id":"7hef1rs7p3rm4l1nk",
   "permalink":"https://quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
   "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e0000da"
