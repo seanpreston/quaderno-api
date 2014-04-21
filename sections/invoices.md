@@ -32,7 +32,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
         "discount":"$0.00",
         "gross_amount":"$93.75"
       }
-    ]
+    ],
     "subtotal":"$93.75",
     "discount":"$0.00",
     "taxes":[],
@@ -82,7 +82,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
         "discount":"$0.00",
         "gross_amount":"$60.00"
       }
-    ]
+    ],
     "subtotal":"$60.00",
     "discount":"$0.00",
     "taxes":[],
@@ -129,7 +129,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
       "discount":"$0.00",
       "gross_amount":"$60.00"
     }
-  ]
+  ],
   "subtotal":"$60.00",
   "discount":"$0.00",
   "taxes":[],
