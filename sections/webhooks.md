@@ -4,15 +4,89 @@ Quaderno Webhooks allows your aplication to receive information about document e
 ## Data formats
 Every webhook uses the same data format, regardless of the event type. The webhook request is a standard POST along with a hash with the following parameters:
                                                                                         
-* document_id - identifier of the document in Quaderno.
-* document_type - Type of the document (invoice, expense, estimate, ...).
-* event - the event which triggered the webhook.
+* event_type - The event which triggered the webhook (invoice.created, estimate.updated, contact.deleted, ...).
+* data - Contains a simplified json representation of the object.
+
+
+```json
+{
+  "event_type":"invoice.created", 
+  "data":
+  {
+    "object":
+    {
+      "id":"26", 
+      "contact_id":"2", 
+      "number":"XX00001281", 
+      "issue_date":"2014-04-22", 
+      "contact_name":"Hello Test APP", 
+      "currency":"EUR", 
+      "gross_amount_cents":"1000", 
+      "total_cents":"1000", 
+      "amount_paid_cents":"0", 
+      "po_number":"", 
+      "due_days":"", 
+      "due_date":"", 
+      "payment_details":"", 
+      "notes":"", 
+      "permalink":"20efc2ea3e9bc7060aaab1dd8c2c6b85a427b30d", 
+      "state":"draft"
+    }
+  }
+}
+```
+
+```json
+{
+  "event_type":"contact.updated", 
+  "data":
+  {
+    "object":
+    {
+      "id":"4", 
+      "kind":"company", 
+      "first_name":"Adella Schowalter", 
+      "last_name":"", 
+      "full_name":"Adella Schowalter", 
+      "contact_name":"", 
+      "street_line_1":"", 
+      "street_line_2":"", 
+      "postal_code":"", 
+      "city":"", 
+      "region":"", 
+      "country":"US", 
+      "phone_1":"", 
+      "fax":"", 
+      "email":"", 
+      "web":"", 
+      "discount":"", 
+      "language":"DE", 
+      "tax_id":"", 
+      "bank_account":"ES6600190020961234567890", 
+      "notes":"", 
+      "bic":"DEUTESBBXXX"}}
+    }
+  }
+}
+```
+
+
 
 ## Event types
-The following event types are supported at the moment:
-* created - The document has been created
-* updated - The document has been updated
-* deleted - The document has been deleted
+Event types are combinations between the objects you want to be notified about and the object state.
+
+Available objects at the moment are:
+* invoice
+* expense
+* estimate
+
+The following states are supported at the moment:
+* created - The object has been created
+* updated - The object has been updated
+* deleted - The objecy has been deleted
+
+
+For example, if you want to be notified whenever an invoice is created or deleted, events types should be `invoice.created` and `invoice.deleted`.
 
 ## Get webhooks
 `GET /webhooks.json` will return all your webhooks.
@@ -34,7 +108,7 @@ The following event types are supported at the moment:
     "id":3,
     "url":"http://anotherapp.com/notifications",
     "auth_key":"HXQgAgblQxAMaNppMrXoSW",
-    "events":["created","deleted"],
+    "events:_types":["invoice.created","contact.deleted"],
     "last_sent_at":null,
     "last_error":null,
     "events_sent":null,
@@ -67,13 +141,13 @@ The following event types are supported at the moment:
 ```json
 {
     "url":"http://anotherapp.com/notifications",
-    "events":["created", "updated", "deleted"]
+    "events_types":["invoice.created", "estimate.updated", "invoice.deleted", "contact.created"]
 }
 ```
 Mandatory fields:
 
 * url: indicates the destination URL of the webhook request. Webhook URLs should be set up to accept HEAD and POST requests. When you provide the URL where you want Quaderno to POST the data for events, we'll do a quick check that the URL exists by using a HEAD request (not POST). If the URL doesn't exist or returns something other than a 200 HTTP response to the HEAD request, Quaderno won't be able to verify that the URL exists and is valid.
-* events: an array of strings that indicates which events will trigger the webhook request.
+* events_types: an array of strings that indicates which events will trigger the webhook request.
 
 This will return `201 Created` with the current JSON representation of the webhook if the creation was a success.  If the user does not have access to create new webhooks, you'll see `401 Unauthorized`.
 
@@ -82,7 +156,7 @@ This will return `201 Created` with the current JSON representation of the webho
 
 ```json
 {
-  "events":["updated", "deleted"]
+  "events_types":["contact.updated", "estimate.deleted"]
 }
 ```
 
