@@ -64,7 +64,7 @@ Every webhook uses the same data format, regardless of the event type. The webho
       "tax_id":"", 
       "bank_account":"ES6600190020961234567890", 
       "notes":"", 
-      "bic":"DEUTESBBXXX"}}
+      "bic":"DEUTESBBXXX"
     }
   }
 }
