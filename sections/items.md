@@ -58,13 +58,15 @@ The items are those products or services that you sell to your customers.
   "tax_1_name":"AWESOME_TAX",
   "tax_1_rate":"7.00",
   "tax_2_name":"ANOTHER_AWESOME_TAX",
-  "tax_2_rate":"10.00"
+  "tax_2_rate":"10.00",
+  "stock":"1000"
 }
 ```
 Mandatory fields:
 
 * name: a name or brief description of the item.
 * unit_cost: cost of the item.
+* code: mandatory __only__ if you want to have stock tracking by defining the value `stock`.
 
 This will return `201 Created`, with the current JSON representation of the item if the creation was a successthe along the location of the new item in the 'url' field .  If the user does not have access to create new items, you'll see `401 Unauthorized`.
 
