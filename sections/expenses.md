@@ -134,6 +134,7 @@ Expenses are all the invoices that you receive from your vendors.
     "quantity":"1.0",
     "unit_price":"0.0",
     "discount_rate":"0.0",
+    "reference":"item_code_X"
     }
   ],
 }
@@ -158,6 +159,7 @@ Mandatory fields:
         "quantity":"1.0",
         "unit_price":"20.0",
         "discount_rate":"0.0",
+        "reference":"item_code_X"
       }
     ],
   }
@@ -167,7 +169,7 @@ Mandatory fields:
   Allowed fields for `contact` are the same as when creating a contact via the contacts API. You can get more information [here](https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md).
 
 
-* __items_attributes:__ An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
+* __items_attributes:__ An array of hashes which contains the description, quantity, unit price and discount rate of each item. If you want to have stock tracking pass the item code as the `reference` attribute. See more about stock tracking [here](https://github.com/recrea/quaderno-api/blob/master/sections/items.md#create-item).
 
 This will return `201 Created`, with the current JSON representation of the expense if the creation was a success along the location of the new expense in the 'url' field .  If the user does not have access to create new expenses, you'll see `401 Unauthorized`.
 
