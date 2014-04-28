@@ -145,7 +145,8 @@ This will return `200 OK` if the deliver was a success along the current JSON re
         "tax_1_name":"",
         "tax_1_rate":"",
         "tax_2_name":"",
-        "tax_2_rate":""
+        "tax_2_rate":"",
+        "reference":"item_code_X"
       }
   ],
   "tag_list":"tnt",
@@ -173,6 +174,7 @@ Mandatory fields:
         "quantity":"1.0",
         "unit_price":"20.0",
         "discount_rate":"0.0",
+        "reference":"item_code_X"
       }
     ],
   }
@@ -182,7 +184,7 @@ Mandatory fields:
   Allowed fields for `contact` are the same as when creating a contact via the contacts API. You can get more information [here](https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md).
 
 
-* __items_attributes:__ An array of hashes which contains the description, quantity, unit price and discount rate of each item. 
+* __items_attributes:__ An array of hashes which contains the description, quantity, unit price and discount rate of each item. If you want to have stock tracking pass the item code as the `reference` attribute. See more about stock tracking [here](https://github.com/recrea/quaderno-api/blob/master/sections/items.md#create-item).
 
 This will return `201 Created`, with the current JSON representation of the estimate if the creation was a successthe along the location of the new estimate in the 'url' field .  If the user does not have access to create new estimates, you'll see `401 Unauthorized`.
 
