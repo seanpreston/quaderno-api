@@ -88,7 +88,7 @@ This will return `200 OK` if the update was a success along with the current JSO
 ## Delete item
 `DELETE /items/1.json` will delete the item specified and return `204 No Content` if that was successful. If the user does not have access to delete the item, you'll see `401 Unauthorized`.
 
-## Adding an item to a document
+## Adding an item to a document by reference
 
 You can use an item attributes to create or update a document (invoice, expense or estimate). In order to use this feature, the item must have a code that must be set as a `reference` in the `items_attributes` array. For example, given this item:
 
