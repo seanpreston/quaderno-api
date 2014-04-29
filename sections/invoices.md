@@ -199,7 +199,7 @@ Mandatory fields:
   Allowed fields for `contact` are the same as when creating a contact via the contacts API. You can get more information [here](https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md).
 
 
-* __items_attributes:__ An array of hashes which contains the description, quantity, unit price and discount rate of each item. If you want to have stock tracking pass the item code as the `reference` attribute. See more about stock tracking [here](https://github.com/recrea/quaderno-api/blob/master/sections/items.md#create-item).
+* __items_attributes:__ An array of hashes which contains the description, quantity, unit price and discount rate of each item. If you want to have stock tracking pass the item code as the `reference` attribute. See more about stock tracking [here](https://github.com/recrea/quaderno-api/blob/master/sections/items.md#create-item). You can also add items to an invoice by passing the reference of a pre-created item. See more [here](https://github.com/recrea/quaderno-api/blob/master/sections/items.md#adding-an-item-to-a-document-by-reference).
 
 This will return `201 Created`, with the current JSON representation of the invoice if the creation was a success along the location of the new invoice in the 'url' field .  If the user does not have access to create new invoices, you'll see `401 Unauthorized`.
 
