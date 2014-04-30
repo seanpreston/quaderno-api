@@ -90,7 +90,7 @@ This will return `200 OK` if the update was a success along with the current JSO
 
 ## Adding an item to a document by reference
 
-You can use an item attributes to create or update a document (invoice, expense or estimate). In order to use this feature, the item must have a code that must be set as a `reference` in the `items_attributes` array. For example, given this item:
+You can use an item attributes to create or update a document (invoice, expense or estimate). In order to use this feature, the item must have a `code` that must be set as a `reference` in the `items_attributes` array. For example, given this item:
 
 ```json
 { 
