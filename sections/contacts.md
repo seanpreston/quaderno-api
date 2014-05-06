@@ -52,7 +52,7 @@ A contact is any client or vendor who appears on any of your invoices or expense
   }
 ]
 ```
-You can filter the results by full name, email or tax ID by passing the q parameter in the url like `?q=KEYWORD`.
+You can filter the results by full name, email or tax ID by passing the `q` parameter in the url like `?q=KEYWORD`.
 
 ## Get contact
 `GET /contacts/1.json` will return the specified contact.
