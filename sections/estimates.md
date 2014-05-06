@@ -81,6 +81,10 @@ An estimate is an offer that you give a client in order to get a specific job. W
   },
 ]
 ```
+* You can filter the results by number, contact name or P.O. number by passing the `q` parameter in the url like `?q=keyword`.
+* You can also can use a date range as a filter by passing the `date` parameter in the url like `?date=DATE1,DATE2`.
+* State filtering is also available by passing the `state` parameter in the url like `?state=STATE`.
+
 
 ## Get estimate
 `GET /estimates/1.json` will return the specified estimate.
