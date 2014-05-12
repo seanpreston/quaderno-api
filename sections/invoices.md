@@ -208,7 +208,7 @@ This will return `201 Created`, with the current JSON representation of the invo
 
 ### Invoices states
 
-Possible invoices states are:
+Possible invoice states are:
 
 * draft
 * sent
