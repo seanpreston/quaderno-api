@@ -219,7 +219,7 @@ Possible invoice states are:
 
 You can set the invoice state by passing the `state` attribute, but bear these considerations in mind:
 
-* The `paid` state is only reachable if you add a payment to the invoice.
+* The `paid` state is only reachable by adding a `payment` to the invoice and it is also final, so you cannot overwrite it unless you remove the associated payments.
 * The `sent` state only can overwrite the state `draft`.
 
 ### Create an attachment during invoice creation
