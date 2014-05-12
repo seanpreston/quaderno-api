@@ -206,6 +206,22 @@ Mandatory fields:
 
 This will return `201 Created`, with the current JSON representation of the invoice if the creation was a success along the location of the new invoice in the 'url' field .  If the user does not have access to create new invoices, you'll see `401 Unauthorized`.
 
+### Invoices states
+
+Possible invoices states are:
+
+* draft
+* sent
+* partial
+* paid
+* late
+* archived
+
+You can set the invoice state by passing the `state` attribute, but bear these considerations in mind:
+
+* The `paid` state is only reachable if you add a payment to the invoice.
+* The `sent` state only can overwrite the state `draft`.
+
 ### Create an attachment during invoice creation
 
 Optionally, you can pass the following key-value along with the rest of the parameters:
