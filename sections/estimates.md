@@ -192,6 +192,23 @@ Mandatory fields:
 
 This will return `201 Created`, with the current JSON representation of the estimate if the creation was a successthe along the location of the new estimate in the 'url' field .  If the user does not have access to create new estimates, you'll see `401 Unauthorized`.
 
+### Estimate states
+
+Possible estimate states are:
+
+* draft
+* sent
+* accepted
+* declined
+* invoiced
+* reverted
+* late
+
+You can set the estimate state by passing the `state` attribute, but bear these considerations in mind:
+
+* The `invoiced` state is final so you cannot overwrite it.
+* The `sent` state only can overwrite the state `draft`.
+
 ### Create an attachment during estimate creation
 
 Optionally, you can pass the following key-value along with the rest of the parameters:
