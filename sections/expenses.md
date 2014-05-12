@@ -189,7 +189,7 @@ Possible expense states are:
 
 You can set the estimate state by passing the `state` attribute, but bear these considerations in mind:
 
-* The `paid` state is only reachable by adding a `payment` and it is also final so you cannot overwrite it unless you remove the associated payments.
+* The `paid` state is only reachable by adding a `payment` to the expense and it is also final, so you cannot overwrite it unless you remove the associated payments.
 
 ### Create an attachment during expense creation
 
