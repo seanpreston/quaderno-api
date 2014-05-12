@@ -178,6 +178,19 @@ Mandatory fields:
 
 This will return `201 Created`, with the current JSON representation of the expense if the creation was a success along the location of the new expense in the 'url' field .  If the user does not have access to create new expenses, you'll see `401 Unauthorized`.
 
+### Expense states
+
+Possible expense states are:
+
+* outstanding
+* paid
+* late
+* archived
+
+You can set the estimate state by passing the `state` attribute, but bear these considerations in mind:
+
+* The `paid` state is only reachable by adding a `payment` and it is also final so you cannot overwrite it unless you remove the associated payments.
+
 ### Create an attachment during expense creation
 
 Optionally, you can pass the following key-value along with the rest of the parameters:
