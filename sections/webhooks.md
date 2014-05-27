@@ -126,7 +126,7 @@ For example, if you want to be notified whenever an invoice is created or delete
   "id":3,
   "url":"http://anotherapp.com/notifications",
   "auth_key":"HXQgAgblQxAMaNppMrXoSW",
-  "events":["created","deleted"],
+  "events_types":["invoice.created","contact.deleted"],
   "last_sent_at":"2013-05-18T11:11:11Z",
   "last_error":null,
   "events_sent":null,
