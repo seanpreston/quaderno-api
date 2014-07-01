@@ -39,7 +39,7 @@ Expenses are all the invoices that you receive from your vendors.
     "tag_list":["rockets", "acme"],
     "notes":"",
     "state":"outstanding",
-    "url":"https://quadernoapp.com/my-account/api/v1/expenses/5076a6b92f412e0e2e00006c"
+    "url":"https://my-account.quadernoapp.com/api/v1/expenses/5076a6b92f412e0e2e00006c"
   },
   {
     "id":"5076a6b92f412e0e2e00016d",
@@ -75,7 +75,7 @@ Expenses are all the invoices that you receive from your vendors.
     "tag_list":["tnt", "acme"],
     "notes":"",
     "state":"outstanding",
-    "url":"https://quadernoapp.com/my-account/api/v1/expenses/5076a6b92f412e0e2e00016d"
+    "url":"https://my-account.quadernoapp.com/api/v1/expenses/5076a6b92f412e0e2e00016d"
   },
 
 ]
@@ -123,7 +123,7 @@ Expenses are all the invoices that you receive from your vendors.
   "tag_list":["rockets", "acme"],
   "notes":"",
   "state":"outstanding",
-  "url":"https://quadernoapp.com/my-account/api/v1/expenses/5076a6b92f412e0e2e00006c"
+  "url":"https://my-account.quadernoapp.com/api/v1/expenses/5076a6b92f412e0e2e00006c"
 }
 ```
 ## Create expense

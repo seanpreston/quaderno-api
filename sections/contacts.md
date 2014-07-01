@@ -27,7 +27,7 @@ A contact is any client or vendor who appears on any of your invoices or expense
     "tax_id":"",
     "language":"EN",
     "notes":"",
-    "url":"https://quadernoapp.com/my-account/api/v1/contacts/456987213"
+    "url":"https://my-account.quadernoapp.com/api/v1/contacts/456987213"
   },
   {
     "id":"456982365",
@@ -48,7 +48,7 @@ A contact is any client or vendor who appears on any of your invoices or expense
     "tax_id":"",
     "language":"EN",
     "notes":"",
-    "url":"https://quadernoapp.com/my-account/api/v1/contacts/456982365"
+    "url":"https://my-account.quadernoapp.com/api/v1/contacts/456982365"
   }
 ]
 ```
@@ -79,7 +79,7 @@ You can filter the results by full name, email or tax ID by passing the `q` para
     "tax_id":"",
     "language":"EN",
     "notes":"",
-    "url":"https://quadernoapp.com/my-account/api/v1/contacts/456987213"
+    "url":"https://my-account.quadernoapp.com/api/v1/contacts/456987213"
 }
 ```
 

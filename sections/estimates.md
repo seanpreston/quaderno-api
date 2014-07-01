@@ -39,8 +39,8 @@ An estimate is an offer that you give a client in order to get a specific job. W
     "notes":"",
     "state":"draft",
     "tag_list":[],
-    "permalink":"https://quadernoapp.com/estimate/7hef1rs7p3rm4l1nk",
-    "url":"https://quadernoapp.com/my-account/api/v1/estimates/50603e722f412e0435000024.json"
+    "permalink":"https://my-account.quadernoapp.com/estimate/7hef1rs7p3rm4l1nk",
+    "url":"https://my-account.quadernoapp.com/api/v1/estimates/50603e722f412e0435000024.json"
   },
   {  
     "id":"50603e722f412e0435000144",
@@ -76,8 +76,8 @@ An estimate is an offer that you give a client in order to get a specific job. W
     "notes":"",
     "state":"draft",
     "tag_list":[],
-    "permalink":"https://quadernoapp.com/estimate/7hes3c0ndp3rm4l1nk",
-    "url":"https://quadernoapp.com/my-account/api/v1/estimates/50603e722f412e0435000144.json"
+    "permalink":"https://my-account.quadernoapp.com/estimate/7hes3c0ndp3rm4l1nk",
+    "url":"https://my-account.quadernoapp.com/api/v1/estimates/50603e722f412e0435000144.json"
   },
 ]
 ```
@@ -123,8 +123,8 @@ An estimate is an offer that you give a client in order to get a specific job. W
   "notes":"",
   "state":"draft",
   "tag_list":[],
-  "permalink":"https://quadernoapp.com/estimate/7hef1rs7p3rm4l1nk",
-  "url":"https://quadernoapp.com/my-account/api/v1/estimates/50603e722f412e0435000024.json"
+  "permalink":"https://my-account.quadernoapp.com/estimate/7hef1rs7p3rm4l1nk",
+  "url":"https://my-account.quadernoapp.com/api/v1/estimates/50603e722f412e0435000024.json"
 }
 ```
 ## Deliver estimate

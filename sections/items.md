@@ -12,7 +12,7 @@ The items are those products or services that you sell to your customers.
     "name":"Titanic",
     "unit_cost":"15.0",
     "stock":"100",
-    "url":"https://quadernoapp.com/my-account/api/v1/items/1"
+    "url":"https://my-account.quadernoapp.com/api/v1/items/1"
   },
   {
     "id":2,
@@ -21,7 +21,7 @@ The items are those products or services that you sell to your customers.
     "unit_cost":"15.0",
     "tax_1_name":"AWESOME_TAX",
     "tax_1_rate":"7.00",
-    "url":"https://quadernoapp.com/my-account/api/v1/items/2"
+    "url":"https://my-account.quadernoapp.com/api/v1/items/2"
   },
   {
     "id":3,
@@ -29,7 +29,7 @@ The items are those products or services that you sell to your customers.
     "name":"Titanic III: The origin",
     "unit_cost":"15.0",
     "stock":"33",
-    "url":"https://quadernoapp.com/my-account/api/v1/items/3"
+    "url":"https://my-account.quadernoapp.com/api/v1/items/3"
   }
 ]
 ```
@@ -45,7 +45,7 @@ The items are those products or services that you sell to your customers.
   "unit_cost":"15.0",
   "tax_1_name":"AWESOME_TAX",
   "tax_1_rate":"7.00",
-  "url":"https://quadernoapp.com/my-account/api/v1/items/2"
+  "url":"https://my-account.quadernoapp.com/api/v1/items/2"
 }
 ```
 

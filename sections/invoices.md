@@ -43,7 +43,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
         "date":"2012-11-21",
         "payment_method":"credit_card",
         "amount":"\u20ac93.75",
-        "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e00000f/payments/50aca7d92f412eda5200002c.json"
+        "url":"https://my-account.quadernoapp.com/api/v1/invoices/507693322f412e0e2e00000f/payments/50aca7d92f412eda5200002c.json"
       },
     ],
     "payment_details":"Ask Jon",
@@ -52,7 +52,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
     "tag_list":["lasagna", "cat"],
     "secure_id":"7hef1rs7p3rm4l1nk",
     "permalink":"https://quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
-    "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e00000f"
+    "url":"https://my-account.quadernoapp.com/api/v1/invoices/507693322f412e0e2e00000f"
   },
 
   {
@@ -93,8 +93,8 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
     "state":"draft",
     "tag_list":["pizza", "turtles"],
     "secure_id":"7hes3c0ndp3rm4l1nk",
-    "permalink":"https://quadernoapp.com/invoice/7hes3c0ndp3rm4l1nk",
-    "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e0000da"
+    "permalink":"https://my-account.quadernoapp.com/invoice/7hes3c0ndp3rm4l1nk",
+    "url":"https://my-account.quadernoapp.com/api/v1/invoices/507693322f412e0e2e0000da"
   },
 ]
 ```
@@ -143,8 +143,8 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
   "state":"draft",
   "tag_list":["lasagna", "cat"],
   "secure_id":"7hef1rs7p3rm4l1nk",
-  "permalink":"https://quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
-  "url":"https://quadernoapp.com/my-account/api/v1/invoices/507693322f412e0e2e0000da"
+  "permalink":"https://my-account.quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
+  "url":"https://my-account.quadernoapp.com/api/v1/invoices/507693322f412e0e2e0000da"
 }
 ```
 
