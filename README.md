@@ -4,7 +4,7 @@ The Quaderno API is based on REST: it is comprised of resources with predictable
 ## Making a request
 All URLs starts with `https://ACCOUNT-NAME.quadernoapp.com/api/v1/`. The host is formed by the `ACCOUNT-NAME` as the subdomain and the `quadernoapp.com` domain. The path is prefixed with the account name and the API version. You can get your account name on your profile page.
 
-To make a request for all the contacts in your account for instance, you have to append the contacts index path to the base url to form something like https://ACCOUNT-NAME.quadernoapp.com/api/v1/contacts.json. In curl, it would look like:
+To make a request for all the contacts in your account for instance, you have to append the contacts index path to the base url to form something like `https://ACCOUNT-NAME.quadernoapp.com/api/v1/contacts.json`. In curl, it would look like:
 
 ```shell
 curl -u user:pass -X GET 'https://ACCOUNT-NAME.quadernoapp.com/api/v1/contacts.json'
