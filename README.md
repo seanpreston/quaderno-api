@@ -39,6 +39,7 @@ You can get more information in the [Authentication page](https://github.com/rec
 * [Items] (https://github.com/recrea/quaderno-api/blob/master/sections/items.md)
 * [Payments] (https://github.com/recrea/quaderno-api/blob/master/sections/payments.md)
 * [Webhooks] (https://github.com/recrea/quaderno-api/blob/master/sections/webhooks.md)
+* [Taxes] (https://github.com/recrea/quaderno-api/blob/master/sections/taxes.md)
 
 ## Rate limiting
 You can perform up to 2000 requests per month for account. If you exceed this limit, you'll get a `403 Forbiden` response for subsequent requests.
