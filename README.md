@@ -29,17 +29,17 @@ HTTP Authentication is used to authenticate with The API. Your username is your 
 curl -u token-id:foo https://ACCOUNT-NAME.quadernoapp.com/api/v1/invoices.json
 ```
 
-You can get more information in the [Authentication page](https://github.com/recrea/quaderno-api/blob/master/sections/authentication.md).
+You can get more information in the [Authentication page](https://github.com/quaderno/quaderno-api/blob/master/sections/authentication.md).
 
 ## API resources
-* [Contacts] (https://github.com/recrea/quaderno-api/blob/master/sections/contacts.md)
-* [Invoices] (https://github.com/recrea/quaderno-api/blob/master/sections/invoices.md)
-* [Expenses] (https://github.com/recrea/quaderno-api/blob/master/sections/expenses.md)
-* [Estimates] (https://github.com/recrea/quaderno-api/blob/master/sections/estimates.md)
-* [Items] (https://github.com/recrea/quaderno-api/blob/master/sections/items.md)
-* [Payments] (https://github.com/recrea/quaderno-api/blob/master/sections/payments.md)
-* [Webhooks] (https://github.com/recrea/quaderno-api/blob/master/sections/webhooks.md)
-* [Taxes] (https://github.com/recrea/quaderno-api/blob/master/sections/taxes.md)
+* [Contacts] (https://github.com/quaderno/quaderno-api/blob/master/sections/contacts.md)
+* [Invoices] (https://github.com/quaderno/quaderno-api/blob/master/sections/invoices.md)
+* [Expenses] (https://github.com/quaderno/quaderno-api/blob/master/sections/expenses.md)
+* [Estimates] (https://github.com/quaderno/quaderno-api/blob/master/sections/estimates.md)
+* [Items] (https://github.com/quaderno/quaderno-api/blob/master/sections/items.md)
+* [Payments] (https://github.com/quaderno/quaderno-api/blob/master/sections/payments.md)
+* [Webhooks] (https://github.com/quaderno/quaderno-api/blob/master/sections/webhooks.md)
+* [Taxes] (https://github.com/quaderno/quaderno-api/blob/master/sections/taxes.md)
 
 ## Rate limiting
 You can perform up to 2000 requests per month for account. If you exceed this limit, you'll get a `403 Forbiden` response for subsequent requests.
@@ -67,8 +67,8 @@ If the app is having trouble, you might see a 5xx error. 500 means that the app 
 ## API kits
 At the moment, API kits are available in Ruby and PHP5. Their goal is to make integrating with our API as easy as possible.
 
-**Ruby**: [https://github.com/recrea/quaderno-ruby](https://github.com/recrea/quaderno-ruby)  
-**PHP**: [https://github.com/recrea/quaderno-php](https://github.com/recrea/quaderno-php)
+**Ruby**: [https://github.com/quaderno/quaderno-ruby](https://github.com/quaderno/quaderno-ruby)  
+**PHP**: [https://github.com/quaderno/quaderno-php](https://github.com/quaderno/quaderno-php)
 
 ## Improvements
 Please tell us how we can make the API better. If you have a specific feature request or if you found a bug, please use GitHub issues. Fork these docs and send a pull request with improvements.
