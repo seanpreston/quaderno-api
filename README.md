@@ -39,6 +39,7 @@ You can get more information in the [Authentication page](https://github.com/qua
 * [Items] (https://github.com/quaderno/quaderno-api/blob/master/sections/items.md)
 * [Payments] (https://github.com/quaderno/quaderno-api/blob/master/sections/payments.md)
 * [Webhooks] (https://github.com/quaderno/quaderno-api/blob/master/sections/webhooks.md)
+* [Transactions] (https://github.com/quaderno/quaderno-api/blob/master/sections/transactions.md)
 * [Taxes] (https://github.com/quaderno/quaderno-api/blob/master/sections/taxes.md)
 
 ## Rate limiting
