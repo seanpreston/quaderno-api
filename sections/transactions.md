@@ -55,7 +55,7 @@ While your customer is filling his data in your website form you can make live t
 If the customer wants to proceed to checkout, before completing the order you must create a transaction object as seen in the [create transaction section](https://github.com/quaderno/quaderno-api/blob/master/sections/transactions.md#create-transactions). If all the required transaction fields are present there are two possible scenarios:
 
 * **Scenario 1:** The customer has incoherent data so it doesn't meet the VAT compliance. In this case the transaction is not saved because Quaderno cannot verify the right tax for this customer. We do not recommend proceeding with the order as you may apply wrong taxes.
-* **Scenario 2:** The customer has at least two coincident data for the country (for i.e. the country of the request ip  and the country of the zip code are the same). In this case the customer's data meets the VAT compliance so Quaderno will save the transaction as a history record. Now you can proceed to the step 3.
+* **Scenario 2:** The customer has at least two coincident data for the country (i.e. the country of the request ip  and the country of the zip code are the same). In this case the customer's data meets the VAT compliance so Quaderno will save the transaction as a history record. Now you can proceed to the step 3.
 
 ### Step 3: Process and complete the order
 Now that everything is verified and the information is stored, you can complete the order and create the payment in your website (i.e. debit the customer’s payment method).
