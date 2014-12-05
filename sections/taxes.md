@@ -7,7 +7,7 @@ Parameters:
 
 * country: 2 characters representing the country code of the customer in [ISO 3166-1 format](http://en.wikipedia.org/wiki/ISO_3166-1#Current_codes).
 * postal_code: the customer's zip/postal code.
-* tax_id: the customer's tax id.
+* vat_number: the customer's VAT number.
 
 All the parameters are optional but omitting relevant information may result in less precise results.
 
@@ -15,7 +15,7 @@ This will return `200 OK` if the request was a success along with taxes applied 
 
 Example request and response:
 
-`/taxes/calculate.json?country=ES&postal_code=08080&tax_id=A58818501`
+`/taxes/calculate.json?country=ES&postal_code=08080&vat_number=ESA58818501`
 
 ```json
 {
