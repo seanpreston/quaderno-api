@@ -6,7 +6,7 @@ With the Quaderno transactions flow you can make live taxes calculations in your
 
 If you are not using the [quaderno.js for Stripe](https://github.com/quaderno/quaderno.js), you probably want to do most of it via ajax, so in this case please note that as it executes your code on the client side it will expose your API token. **We recommend using mechanisms to hide it such as proxy pages**.
 
-Here is a practical example: 
+Let's start with a practical example: 
 
 Suppose you are running an e-books store placed in Madrid, Spain. A customer has just finished adding products to the shopping cart and now he/she wants to checkout.
 
