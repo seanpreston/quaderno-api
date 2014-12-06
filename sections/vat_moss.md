@@ -1,10 +1,13 @@
-## Transactions flow
+# Transactions flow
 
 In order to meet VAT MOSS compliance you can use the Quaderno transactions flow.
 
 With the Quaderno transactions flow you can make live taxes calculations in your website and check if the customer data meets the VAT compliance before completing the order. 
 
 If you are not using the [quaderno.js for Stripe](https://github.com/quaderno/quaderno.js), you probably want to do most of it via ajax, so in this case please note that as it executes your code on the client side it will expose your API token. **We recommend using mechanisms to hide it such as proxy pages**.
+
+
+## Integration in your system:
 
 Let's start with a practical example: 
 
