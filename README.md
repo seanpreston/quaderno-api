@@ -43,10 +43,12 @@ You can get more information in the [Authentication page](https://github.com/qua
 * [Taxes] (https://github.com/quaderno/quaderno-api/blob/master/sections/taxes.md)
 
 ## Rate limiting
-You can perform up to 2000 requests per month for account. If you exceed this limit, you'll get a `403 Forbiden` response for subsequent requests.
-The following headers will inform you about the daily limit and your remaining requests.
 
-* X-RateLimit-Limit
+There is a time limit of 100 API calls per 15 seconds. We reserve the right to tune the limitations, but they are always set high enough to allow a well-behaving interactive program to do its job. If you exceed this rate limit you will receive a HTTP 503 (Service Unavailable).
+
+To make it easier for your application to determine if it is being rate-limited, or if it is likely to be in the future, we've added the following HTTP headers to successful responses:
+
+* X-RateLimit-Reset
 * X-RateLimit-Remaining
 
 ## Pagination
