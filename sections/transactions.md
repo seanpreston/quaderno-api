@@ -28,14 +28,12 @@ A transaction is a record that keeps relevant information (country, ip, iin, tax
     "amount":1200
 }
 ```
-Mandatory fields:
 
-* country: the customer's country in ISO 3166-1 format.
-* iin: the first six digits of the customer's credit card.
-* ip: the customer's request ip.
-* amount: indicates (in cents) the base amount of the transaction. **Must exist if** `total_amount` **is left blank**.
-* total_amount: indicates (in cents) the total amount of the transaction (base amount + taxes). **Must exist if** `amount` **is left blank**.
-
+* country: the customer's country in ISO 3166-1 format. **Mandatory**
+* iin: first six digits of the credit card. It's the public [Issuer Identification Number](http://en.wikipedia.org/wiki/Bank_card_number#Issuer_identification_number_.28IIN.29). **Optional**
+* ip: the customer's request ip. **Optional**
+* amount: indicates (in cents) the base amount of the transaction. **Mandatory if** `total_amount` **is left blank**.
+* total_amount: indicates (in cents) the total amount of the transaction (base amount + taxes). **Mandatory if** `amount` **is left blank**.
 
 This will return `201 Created`, with the current JSON representation of the transaction if the creation was a success or a `422 Unprocessable entity` if some of the required fields are missing or the data don't meet the VAT compliance (check the country attribute message for this case).
 
