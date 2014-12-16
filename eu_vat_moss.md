@@ -60,7 +60,7 @@ Then, you can create a charge or a subscription on Stripe. If you create a charg
 ```php
 //charge the customer
 Stripe_Charge::create(array(
-  "amount" => 1428,
+  "amount" => 1428, // final amount, including taxes
   "currency" => "eur",
   "customer" => "cus_4BnckL2duT7i4y", 
   "description" => "The Neverending Story, Michael Ende (EPUB)",
