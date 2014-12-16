@@ -36,7 +36,6 @@ In case you want to do this calculations via ajax, note that as it executes your
 Now that everything is verified and the information is stored, you can complete the order and take the payment on Stripe. First, create a Stripe customer
 
 ```php
-//create a customer
 Stripe_Customer::create(array(
   "description" => "Customer Full Name",
   "email" => "text@example.com",
@@ -58,7 +57,6 @@ Stripe_Customer::create(array(
 Then, you can create a charge or a subscription on Stripe. If you create a charge, don't forget to send the tax data you want to apply and the customer IP address. We'll use the latter to check the customer location.
 
 ```php
-//charge the customer
 Stripe_Charge::create(array(
   "amount" => 1428, // final amount, including taxes
   "currency" => "eur",
@@ -93,7 +91,7 @@ $cu->subscriptions->create(array(
     "plan" => "awesome",
     "metadata" => array(
        "ip_address" => '0.0.0.0'
-    )
+    ) // all metadata are optional
 ));
 ```
 
