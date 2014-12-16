@@ -1,4 +1,4 @@
-# EU VAT MOSS Compliance
+# EU VAT MOSS Compliance for Stripe
 
 In order to meet EU VAT MOSS compliance you can use the Quaderno Transactions Flow.
 
@@ -8,9 +8,7 @@ With this flow you can make live taxes calculations in your website and check if
 
 ## The Flow
 
-Let's start with a practical example: 
-
-Suppose you are running an e-books store based in Barcelona, Spain. Your customer, a German guy based in Berlin, has just finished adding products to the shopping cart and now he wants to checkout.
+Let's start with a practical example. Suppose your business is based in Barcelona and your customer is a German guy based in Berlin.
 
 ### Step 1: Calculate Taxes
 While your customer is filling in your checkout form (card number, name, etc.), you can make live taxes calculations by calling our taxes calculate method (see the [taxes section](https://github.com/quaderno/quaderno-api/blob/master/sections/taxes.md) to get more info). 
@@ -30,44 +28,12 @@ This call will return a JSON object with the tax you may apply to this customer.
 }
 ```
 
+You can use the tax rate to show the final amount your customer is going to pay.
+
 In case you want to do this calculations via ajax, note that as it executes your code on the client side it will expose your API token. We recommend using mechanisms to hide it such as proxy pages.
 
-### Step 2: Create the Transaction Object
-After finishing filling his/her data, your customer will click the "Pay button".
-
-Before completing the order you must create a transaction object. A sample call would look like this:
-
-```sh
-$ curl https://quadernoapp.com/api/v1/transactions.json
-    -u HPx1vDBKCG85X1HppFo8:x
-    -d country=DE
-    -d postal_code=10245
-    -d vat_number=DE345789003
-    -d ip=85.155.156.203
-    -d iin=424242
-    -d amount=1200
-```
-
-If all the required transaction fields are present there are two possible scenarios:
-
-* **Scenario 1:** The customer has incoherent data so it doesn't meet the VAT compliance. In this case the transaction is not saved and the response code will be a `422` Quaderno cannot verify the right tax for this customer. We do not recommend proceeding with the order as you may apply wrong taxes.
-* **Scenario 2:** The customer has at least two coincident data for the country (i.e. the billing country and the country of the IP address). In this case the customer's data meets the VAT compliance so Quaderno will save the transaction as a history record and will return a `201` as a response code and a JSON representation of the transaction like this one:
-
-```json
-{
-    "id":8,
-    "tax_name":"VAT",
-    "tax_rate":19.0,
-    "amount":1200,
-    "tax_amount":228,
-    "total_amount":1428,
-}
-```
-
-If you need more information about this step you can check the [create transaction section](https://github.com/quaderno/quaderno-api/blob/master/sections/transactions.md#create-transactions)
-
-### Step 3: Process and Complete the Order
-Now that everything is verified and the information is stored, you can complete the order and take the payment on your payment gateway. For example, if you were using Stripe just add the ID of the transaction created in step 2 as a charge metadata:
+### Step 2: Process and Complete the Order
+Now that everything is verified and the information is stored, you can complete the order and take the payment on Stripe. First, create a Stripe customer
 
 ```php
 //create a customer
@@ -76,20 +42,22 @@ Stripe_Customer::create(array(
   "email" => "text@example.com",
   "card" => "tok_103NCO2eZvKYlo2Cc4lerc1E", // obtained with Stripe.js
   "metadata" => array(
-    "first_name" => "Test",  // not if company
-    "last_name" => "",  // not if company
-    "contact_person" => "",
-    "street_line_1" => "123 Carenden Road",
-    "street_line_2" => "",
-    "city" => "London",
-    "postal_code" => "EC5M 8AJ",
-    "region" => "London",
-    "country" => "GB", // code ISO 3166-1 alpha-2
-    "tax_id" => "13456789",
-    "language" => "EN"
+    "first_name" => "First name",  // not if company
+    "last_name" => "Last name",  // not if company
+    "contact_person" => "", //if company
+    "street_line_1" => "Boxhaneger Platz 1",
+    "city" => "Berlin",
+    "postal_code" => "10245",
+    "region" => "Berlin",
+    "country" => "DE", // code ISO 3166-1 alpha-2
+    "tax_id" => "DE345789003"
   ) // all metadata are optional
 ));
+```
 
+Then, you can create a charge or a subscription on Stripe. If you create a charge, don't forget to send the tax data you want to apply and the customer IP address. We'll use the latter to check the customer location.
+
+```php
 //charge the customer
 Stripe_Charge::create(array(
   "amount" => 1428,
@@ -97,10 +65,36 @@ Stripe_Charge::create(array(
   "customer" => "cus_4BnckL2duT7i4y", 
   "description" => "The Neverending Story, Michael Ende (EPUB)",
   "metadata" => array(
-    "quantity" => 1,
-    "transaction_id" => 8, // obtained with Quaderno API
-    "po_number" => "AX562",
-    "notes" => "Lorem ipsum...",
+    "tax_name" => "VAT",
+    "tax_rate" => 19,
+    "ip_address" => "0.0.0.0"
   ) // all metadata are optional
 ));
 ```
+
+If you want to create a subscription, you have to create first a Stripe Invoice Item to add the taxes to the final invoice. Don't forget to send the customer IP address if you want we to check the customer location.  
+
+```php
+$cu = Stripe_Customer::retrieve("cus_4BnckL2duT7i4y");
+
+Stripe_InvoiceItem::create(array(
+    "customer" => "cus_4BnckL2duT7i4y",
+    "amount" => 119, // the tax amount in cents for a 10€ plan
+    "currency" => "eur",
+    "description" => "Taxes",
+    "metadata" => array(
+        "type" => "tax",
+        "name" => "VAT",
+        "rate" => 19,
+    )
+));
+
+$cu->subscriptions->create(array(
+    "plan" => "awesome",
+    "metadata" => array(
+       "ip_address" => '0.0.0.0'
+    )
+));
+```
+
+In both cases, Quaderno will always create an invoice and send you a notification if it cannot check the customer location using the billing country, the IP address, and the credit card country. 
