@@ -36,14 +36,14 @@ In case you want to do this calculations via ajax, note that as it executes your
 Now that everything is verified and the information is stored, you can complete the order and take the payment on Stripe. First, create a Stripe customer
 
 ```php
-Stripe_Customer::create(array(
-  "description" => "Customer Full Name",
+$customer = Stripe_Customer::create(array(
+  "description" => "Reynholm Industries",
   "email" => "text@example.com",
   "card" => "tok_103NCO2eZvKYlo2Cc4lerc1E", // obtained with Stripe.js
   "metadata" => array(
-    "first_name" => "First name",  // not if company
-    "last_name" => "Last name",  // not if company
-    "contact_person" => "", //if company
+    "first_name" => "",  // not if company
+    "last_name" => "",  // not if company
+    "contact_person" => "", 
     "street_line_1" => "Boxhaneger Platz 1",
     "city" => "Berlin",
     "postal_code" => "10245",
@@ -54,29 +54,29 @@ Stripe_Customer::create(array(
 ));
 ```
 
-Then, you can create a charge or a subscription on Stripe. If you create a charge, don't forget to send the tax data you want to apply and the customer IP address. We'll use the latter to check the customer location.
+You can create then a charge for a single purchase.
 
 ```php
 Stripe_Charge::create(array(
   "amount" => 1428, // final amount, including taxes
   "currency" => "eur",
-  "customer" => "cus_4BnckL2duT7i4y", 
+  "customer" => $customer->id, 
   "description" => "The Neverending Story, Michael Ende (EPUB)",
   "metadata" => array(
     "tax_name" => "VAT",
     "tax_rate" => 19,
-    "ip_address" => "0.0.0.0"
+    "ip_address" => $_SERVER['REMOTE_ADDR']
   ) // all metadata are optional
 ));
 ```
 
-If you want to create a subscription, you have to create first a Stripe Invoice Item to add the taxes to the final invoice. Don't forget to send the customer IP address if you want we to check the customer location.  
+Or you can create a subscription on a recurring basis.
+
+In this case, you have to create first a Stripe Invoice Item to add the taxes to the first invoice. Quaderno will take care of the recurring invoices.
 
 ```php
-$cu = Stripe_Customer::retrieve("cus_4BnckL2duT7i4y");
-
 Stripe_InvoiceItem::create(array(
-    "customer" => "cus_4BnckL2duT7i4y",
+    "customer" => $customer->id,
     "amount" => 119, // the tax amount in cents for a 10€ plan
     "currency" => "eur",
     "description" => "Taxes",
@@ -87,12 +87,14 @@ Stripe_InvoiceItem::create(array(
     )
 ));
 
-$cu->subscriptions->create(array(
+$customer->subscriptions->create(array(
     "plan" => "awesome",
     "metadata" => array(
-       "ip_address" => '0.0.0.0'
+       "ip_address" => $_SERVER['REMOTE_ADDR']
     ) // all metadata are optional
 ));
 ```
 
-In both cases, Quaderno will always create an invoice and send you a notification if it cannot check the customer location using the billing country, the IP address, and the credit card country. 
+Don't forget to set the customer IP address in both charges and subscriptions, if you want Quaderno to check the customer location according to the VAT MOSS requirements.
+
+In both cases, Quaderno will always create an invoice and send you a notification if it's not able to check the customer location using the billing country, the IP address, and the credit card country. 
