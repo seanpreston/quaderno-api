@@ -75,20 +75,9 @@ Or you can create a subscription on a recurring basis.
 In this case, you have to create first a Stripe Invoice Item to add the taxes to the first invoice. Quaderno will take care of the recurring invoices.
 
 ```php
-Stripe_InvoiceItem::create(array(
-    "customer" => $customer->id,
-    "amount" => 119, // the tax amount in cents for a 10€ plan
-    "currency" => "eur",
-    "description" => "Taxes",
-    "metadata" => array(
-        "type" => "tax",
-        "name" => "VAT",
-        "rate" => 19,
-    )
-));
-
 $customer->subscriptions->create(array(
     "plan" => "awesome",
+    "tax_percent" => 20,
     "metadata" => array(
        "ip_address" => $_SERVER['REMOTE_ADDR']
     ) // all metadata are optional
