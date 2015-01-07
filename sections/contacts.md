@@ -89,6 +89,8 @@ You can filter the results by full name, email or tax ID by passing the `q` para
 }
 ```
 
+If you've connected **Quaderno and Stripe**, you can also use `GET /stripe/customers/STRIPE_CUSTOMER_ID` to get the Quaderno contact for a Stripe customer.
+
 ## Create contact
 `POST /contacts.json` will create a new contact from the parameters passed.
 
