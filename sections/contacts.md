@@ -113,7 +113,7 @@ This will return `201 Created`, with the current JSON representation of the cont
 
 ```json
 {
-    "full_name":"Homer Jay Simpson",
+    "last_name":"Jay Simpson",
     "street_line_1":"742 Evergreen Terrace",
     "postal_code":"90701",
     "city":"Sprinfield",
