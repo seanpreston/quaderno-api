@@ -71,6 +71,7 @@ At the moment, API kits are available in Ruby and PHP5. Their goal is to make in
 
 **Ruby**: [https://github.com/quaderno/quaderno-ruby](https://github.com/quaderno/quaderno-ruby)  
 **PHP**: [https://github.com/quaderno/quaderno-php](https://github.com/quaderno/quaderno-php)
+**iOS**: [https://github.com/quaderno/quaderno-ios](https://github.com/quaderno/quaderno-ios)
 
 ## Improvements
 Please tell us how we can make the API better. If you have a specific feature request or if you found a bug, please use GitHub issues. Fork these docs and send a pull request with improvements.
