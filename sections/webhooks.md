@@ -70,7 +70,21 @@ Every webhook uses the same data format, regardless of the event type. The webho
 }
 ```
 
-
+```json
+{
+  "event_type":"payment.created", 
+  "data":
+  {
+    "object":
+    {
+      "id":"15", 
+      "date":"2015-01-29", 
+      "payment_method":"credit_card", 
+      "amount_cents":"400"
+    }
+  }
+} 
+```
 
 ## Event types
 Event types are combinations between the objects you want to be notified about and the object state.
@@ -79,11 +93,12 @@ Available objects at the moment are:
 * invoice
 * expense
 * estimate
+* payment
 
 The following states are supported at the moment:
 * created - The object has been created
-* updated - The object has been updated
-* deleted - The objecy has been deleted
+* updated - The object has been updated (not available for payments)
+* deleted - The objecy has been deleted (not available for payments)
 
 
 For example, if you want to be notified whenever an invoice is created or deleted, events types should be `invoice.created` and `invoice.deleted`.
