@@ -52,6 +52,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
     "tag_list":["lasagna", "cat"],
     "secure_id":"7hef1rs7p3rm4l1nk",
     "permalink":"https://quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
+    "pdf":"https://quadernoapp.com/invoice/7hef1rs7p3rm4l1nk.pdf",
     "url":"https://my-account.quadernoapp.com/api/v1/invoices/507693322f412e0e2e00000f"
   },
 
@@ -94,6 +95,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
     "tag_list":["pizza", "turtles"],
     "secure_id":"7hes3c0ndp3rm4l1nk",
     "permalink":"https://my-account.quadernoapp.com/invoice/7hes3c0ndp3rm4l1nk",
+    "pdf":"https://my-account.quadernoapp.com/invoice/7hes3c0ndp3rm4l1nk.pdf",
     "url":"https://my-account.quadernoapp.com/api/v1/invoices/507693322f412e0e2e0000da"
   },
 ]
@@ -145,6 +147,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
   "tag_list":["lasagna", "cat"],
   "secure_id":"7hef1rs7p3rm4l1nk",
   "permalink":"https://my-account.quadernoapp.com/invoice/7hef1rs7p3rm4l1nk",
+  "pdf":"https://my-account.quadernoapp.com/invoice/7hef1rs7p3rm4l1nk.pdf",
   "url":"https://my-account.quadernoapp.com/api/v1/invoices/507693322f412e0e2e0000da"
 }
 ```
