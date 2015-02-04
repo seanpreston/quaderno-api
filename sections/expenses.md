@@ -10,11 +10,12 @@ Expenses are all the invoices that you receive from your vendors.
     "number":"00211",
     "issue_date":"2012-10-11",
     "contact":{
-    "id":"5059bdbf2f412e0901000024",
-    "full_name":"ACME"
+      "id":"5059bdbf2f412e0901000024",
+      "full_name":"ACME"
     },
     "po_number":"",
     "currency":"USD",
+    "exchange_rate":"0.680309",
     "items":[
       {
         "id":"48151623423",
@@ -51,6 +52,7 @@ Expenses are all the invoices that you receive from your vendors.
     },
     "po_number":"",
     "currency":"USD",
+    "exchange_rate":"0.680309",
     "items":[
       {
       "id":" 48151623424",
@@ -85,6 +87,7 @@ Expenses are all the invoices that you receive from your vendors.
 * You can also can use a date range as a filter by passing the `date` parameter in the url like `?date=DATE1,DATE2`.
 * State filtering is also available by passing the `state` parameter in the url like `?state=STATE`.
 * If you want to index the expenses for a specific vendor you can do it by passing the vendor id in the `contact` parameter like `?contact=3231`. 
+* The `exchange_rate` value is only available if the expense currency differs from your account currency.
 
 ## Get expense
 `GET /expenses/1.json` will return the specified expense.
