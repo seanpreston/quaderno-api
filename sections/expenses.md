@@ -10,11 +10,12 @@ Expenses are all the invoices that you receive from your vendors.
     "number":"00211",
     "issue_date":"2012-10-11",
     "contact":{
-    "id":"5059bdbf2f412e0901000024",
-    "full_name":"ACME"
+      "id":"5059bdbf2f412e0901000024",
+      "full_name":"ACME"
     },
     "po_number":"",
     "currency":"USD",
+    "exchange_rate":"0.680309",
     "items":[
       {
         "id":"48151623423",
@@ -51,6 +52,7 @@ Expenses are all the invoices that you receive from your vendors.
     },
     "po_number":"",
     "currency":"USD",
+    "exchange_rate":"0.680309",
     "items":[
       {
       "id":" 48151623424",

@@ -16,6 +16,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
     "po_number":null,
     "due_date":null,
     "currency":"USD",
+    "exchange_rate":"0.680309",
     "items":[
       {
         "id":"48151623429",
@@ -67,6 +68,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
     "po_number":null,
     "due_date":null,
     "currency":"USD",
+    "exchange_rate":"0.680309",
     "items":[
       {
         "id":"481516234291",
@@ -119,6 +121,7 @@ An invoice is a detailed list of goods shipped or services rendered, with an acc
   "po_number":null,
   "due_date":null,
   "currency":"USD",
+  "exchange_rate":"0.680309",
   "items":[
     {
       "id":"48151623429",
