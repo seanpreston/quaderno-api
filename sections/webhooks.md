@@ -104,6 +104,8 @@ The following states are supported at the moment:
 
 For example, if you want to be notified whenever an invoice is created or deleted, events types should be `invoice.created` and `invoice.deleted`.
 
+In case of error of your endpoint, i.e. it doesn't respond with a 200 when Quaderno `POSTs` the event, Quaderno will try to resend it during 48 hours. If no success response is given in that time, your subscription to the webhook will be deleted.
+
 ## Get webhooks
 `GET /webhooks.json` will return all your webhooks.
 
