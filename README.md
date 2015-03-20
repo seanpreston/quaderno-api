@@ -2,18 +2,18 @@
 The Quaderno API is based on REST: it is comprised of resources with predictable urls and utilises standard HTTP features (like HTTP Basic Authentication, Response Codes and Methods). All requests, including errors, return JSON. The API expects JSON for all POST and PUT requests.
 
 ## Making a request
-All URLs starts with `https://ACCOUNT-NAME.quadernoapp.com/api/v1/`. The host is formed by the `ACCOUNT-NAME` as the subdomain and the `quadernoapp.com` domain. The path is prefixed with the account name and the API version. You can get your account name on your profile page.
+All URLs starts with `https://ACCOUNT-NAME.quadernoapp.com/api/v1/`. The host is formed by the `ACCOUNT-NAME` as the subdomain and the `quadernoapp.com` domain. The path is prefixed with the account name and the API version. You can get your account name from your account.
 
 To make a request for all the contacts in your account for instance, you have to append the contacts index path to the base url to form something like `https://ACCOUNT-NAME.quadernoapp.com/api/v1/contacts.json`. In curl, it would look like:
 
 ```shell
-curl -u user:pass -X GET 'https://ACCOUNT-NAME.quadernoapp.com/api/v1/contacts.json'
+curl -u API-KEY:x -X GET 'https://ACCOUNT-NAME.quadernoapp.com/api/v1/contacts.json'
 ```
 
-To create something, it is similar but you also have to include the Content-Type  header and the JSON data:
+To create something, it is similar but you also have to include the Content-Type header and the JSON data:
 
 ```shell
-curl -u user:pass 
+curl -u API-KEY:x 
 	 -H 'Content-Type: application/json' 
 	 -X POST 
 	 -d {"first_name":"Tony", "kind":"person", "contact_name":"Stark"}
@@ -23,10 +23,12 @@ curl -u user:pass
 We only support JSON for serialization of data. Our format is to have no root element and we use snake_case to describe attribute keys. This means that you have to send Content-Type: application/json; charset=utf-8 when you're POSTing or PUTing data into Quaderno. **All API URLs end in .json to indicate that they accept and return JSON**.
 
 ## Authentication
-HTTP Authentication is used to authenticate with The API. Your username is your Token ID, which is accessible through the "Profile" menu item.
+You authenticate to the Quaderno API by providing your API key in the request. You can manage your API keys from your account.
+
+Authentication to the API occurs via HTTP Basic Auth. Provide your API key as the basic auth username. You do not need to provide a password.
 
 ```shell
-curl -u token-id:foo https://ACCOUNT-NAME.quadernoapp.com/api/v1/invoices.json
+curl -u API-KEY:x https://ACCOUNT-NAME.quadernoapp.com/api/v1/invoices.json
 ```
 
 You can get more information in the [Authentication page](https://github.com/quaderno/quaderno-api/blob/master/sections/authentication.md).
@@ -61,7 +63,7 @@ The following headers will inform you about the page context (current page and t
 In order to test if the service is available, test your authenticate token or know the remaining requests without doing an actual request, you can ping it as follows with no rate limiting cost:
 
 ```shell
-curl -u token_id:foo 'https://ACCOUNT-NAME.quadernoapp.com/api/v1/ping.json'
+curl -u API-KEY:x 'https://ACCOUNT-NAME.quadernoapp.com/api/v1/ping.json'
 ```
 ## Errors
 If the app is having trouble, you might see a 5xx error. 500 means that the app is entirely down, but you might also see 502 Bad Gateway, 503 Service Unavailable, or 504 Gateway Timeout. It's your responsibility in all of these cases to retry your request later.
