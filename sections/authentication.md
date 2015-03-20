@@ -2,13 +2,15 @@
 
 ## API Key
 
-HTTP Authentication is used to authenticate with The API. Your username is your Token ID, which is accessible through the "Profile" menu item.
+You authenticate to the Quaderno API by providing your API key in the request. You can manage your API keys from your account.
+
+Authentication to the API occurs via HTTP Basic Auth. Provide your API key as the basic auth username. You do not need to provide a password.
 
 ```shell
-curl -u token-id:foo 'https://ACCOUNT-NAME.quadernoapp.com/api/v1/contacts'
+curl -u API-KEY:x 'https://ACCOUNT-NAME.quadernoapp.com/api/v1/contacts.json'
 ```
 
-Remember that anyone who has your authentication token can see and change everything you have access to. So you want to guard that as well as you guard your username and password. If you come to fear that it has been compromised, just change your regular password and the authentication token will change too.
+Remember that anyone who has your API key can see and change everything you have access to. So you want to guard that as well as you guard your passwords.
 
 ## Authorization
 
