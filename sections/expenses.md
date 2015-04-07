@@ -81,7 +81,7 @@ Expenses are all the invoices that you receive from your vendors.
 ]
 ```
 
-* You can filter the results by number, contact name or P.O. number by passing the `q` parameter in the url like `?q=keyword`.
+* You can filter the results by contact name or P.O. number by passing the `q` parameter in the url like `?q=keyword`.
 * You can also can use a date range as a filter by passing the `date` parameter in the url like `?date=DATE1,DATE2`.
 * State filtering is also available by passing the `state` parameter in the url like `?state=STATE`.
 * If you want to index the expenses for a specific vendor you can do it by passing the vendor id in the `contact` parameter like `?contact=3231`. 
