@@ -7,7 +7,6 @@ Expenses are all the invoices that you receive from your vendors.
 [
   {
     "id":"5076a6b92f412e0e2e00006c",
-    "number":"00211",
     "issue_date":"2012-10-11",
     "contact":{
       "id":"5059bdbf2f412e0901000024",
@@ -44,7 +43,6 @@ Expenses are all the invoices that you receive from your vendors.
   },
   {
     "id":"5076a6b92f412e0e2e00016d",
-    "number":"00211",
     "issue_date":"2012-10-11",
     "contact":{
     "id":"5059bdbf2f412e0901000024",
@@ -94,7 +92,6 @@ Expenses are all the invoices that you receive from your vendors.
 ```json
 {
   "id":"5076a6b92f412e0e2e00006c",
-  "number":"00211",
   "issue_date":"2012-10-11",
   "contact":{
     "id":"5059bdbf2f412e0901000024",
