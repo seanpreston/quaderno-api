@@ -38,6 +38,7 @@ You can get more information in the [Authentication page](https://github.com/qua
 * [Invoices] (https://github.com/quaderno/quaderno-api/blob/master/sections/invoices.md)
 * [Expenses] (https://github.com/quaderno/quaderno-api/blob/master/sections/expenses.md)
 * [Estimates] (https://github.com/quaderno/quaderno-api/blob/master/sections/estimates.md)
+* [Credits] (https://github.com/quaderno/quaderno-api/blob/master/sections/credits.md)
 * [Items] (https://github.com/quaderno/quaderno-api/blob/master/sections/items.md)
 * [Payments] (https://github.com/quaderno/quaderno-api/blob/master/sections/payments.md)
 * [Taxes] (https://github.com/quaderno/quaderno-api/blob/master/sections/taxes.md)
