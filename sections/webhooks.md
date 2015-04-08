@@ -95,6 +95,7 @@ Available objects at the moment are:
 * expense
 * estimate
 * payment
+* contact
 
 The following states are supported at the moment:
 * created - The object has been created
