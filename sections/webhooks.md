@@ -100,7 +100,7 @@ Available objects at the moment are:
 The following states are supported at the moment:
 * created - The object has been created
 * updated - The object has been updated (not available for payments)
-* deleted - The objecy has been deleted (not available for payments)
+* deleted - The object has been deleted (not available for payments)
 
 
 For example, if you want to be notified whenever an invoice is created or deleted, events types should be `invoice.created` and `invoice.deleted`.
